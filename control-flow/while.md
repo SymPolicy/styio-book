@@ -28,13 +28,18 @@ while True:
 
 {% tabs %}
 {% tab title="Usage" %}
-```
-[...] -> {
+<pre><code>[...] -> {
     ...
     
-    !?(`expr`);
+    ! -> _;
 }
-```
+<strong>
+</strong><strong>[...] -> {
+</strong>    ...
+    
+    !?(`expr`) -> _;
+}
+</code></pre>
 {% endtab %}
 
 {% tab title="Definition" %}
@@ -42,7 +47,7 @@ while True:
 [...] -> {
     ...
     
-    ! <- ?(`expr`);
+    ! -> ?(`expr`) -> _;
 }
 ```
 {% endtab %}
@@ -79,7 +84,7 @@ while True:
 [...] -> {
     ...
     
-    !{};
+    ! -> { };
 }
 ```
 {% endtab %}
