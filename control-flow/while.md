@@ -27,7 +27,7 @@ while True:
 ### + Break
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Usage" %}
 ```
 [...] -> {
     ...
@@ -42,7 +42,54 @@ while True:
 [...] -> {
     ...
     
-    ! <- ?();
+    ! <- ?(`expr`);
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Java" %}
+<pre class="language-java"><code class="lang-java"><strong>while (true) {
+</strong>    // code block
+    
+    if (`expr`) {
+        break;
+    }
+}
+</code></pre>
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+while True:
+    ...
+    
+    if `expr`:
+        break
+```
+{% endtab %}
+{% endtabs %}
+
+### + Continue
+
+{% tabs %}
+{% tab title="Usage" %}
+```
+[...] -> {
+    ...
+    
+    !{};
+}
+```
+{% endtab %}
+
+{% tab title="Definition" %}
+```
+[...] -> {
+    ...
+    
+    ! <- { };
 }
 ```
 {% endtab %}
@@ -55,7 +102,7 @@ while (true) {
     // code block
     
     if (`expr`) {
-        break;
+        continue;
     }
 }
 ```
@@ -67,7 +114,7 @@ while True:
     ...
     
     if `expr`:
-        break
+        continue
 ```
 {% endtab %}
 {% endtabs %}
