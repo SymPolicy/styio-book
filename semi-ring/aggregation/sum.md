@@ -2,9 +2,7 @@
 
 {% tabs %}
 {% tab title="Definition" %}
-<pre><code><strong>R(k, v) +> ?(k.revenue != ~) 
-</strong><strong>    | k.revenue 
-</strong><strong>    | 0
+<pre class="language-markup"><code class="lang-markup"><strong>R(k, v) +> ?(k.revenue != ~) [k.revenue: 0]
 </strong></code></pre>
 {% endtab %}
 {% endtabs %}
