@@ -1,15 +1,9 @@
 # sum
 
 {% tabs %}
-{% tab title="Usage" %}
-```
-R(@k, @v) +> {k: v}
-```
-{% endtab %}
-
 {% tab title="Definition" %}
 ```
-@(k, v) -> R -> !(+) -> {k: v}
+sum(R) <- {"size": v}
 ```
 {% endtab %}
 {% endtabs %}
@@ -17,7 +11,7 @@ R(@k, @v) +> {k: v}
 {% tabs %}
 {% tab title="SDQL" %}
 ```
-sum (<k, v> in R) {k -> v}
+sum (<k, v> in R) {"size" -> v}
 ```
 {% endtab %}
 {% endtabs %}

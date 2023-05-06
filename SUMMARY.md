@@ -20,3 +20,6 @@
 ## Semi-Ring
 
 * [sum](semi-ring/sum.md)
+* [count](semi-ring/count.md)
+* [max / min](semi-ring/max-min.md)
+* [first / last](semi-ring/first-last.md)
