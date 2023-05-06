@@ -26,6 +26,12 @@ while True:
 
 ### + Break
 
+```
+// macro start: check `expr` and then reset this code block
+
+! -> ?() -> _ 
+```
+
 {% tabs %}
 {% tab title="Usage" %}
 <pre><code>[...] -> {
@@ -78,6 +84,12 @@ while True:
 
 ### + Continue
 
+```
+// macro start: do nothing
+
+! -> {} 
+```
+
 {% tabs %}
 {% tab title="Usage" %}
 ```
@@ -94,7 +106,7 @@ while True:
 [...] -> {
     ...
     
-    ! <- { };
+    ! -> {};
 }
 ```
 {% endtab %}
