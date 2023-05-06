@@ -39,7 +39,7 @@ while True:
 
 {% tab title="Definition" %}
 ```
-[...] -> {[...] -> {
+[...] -> {
     ...
     
     ! <- ?();
