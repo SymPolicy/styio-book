@@ -3,7 +3,7 @@
 {% tabs %}
 {% tab title="Definition" %}
 ```
-sum(R) <- {"size": v}
+@(k, v) -> sum(R) <- {"size": v}
 ```
 {% endtab %}
 {% endtabs %}

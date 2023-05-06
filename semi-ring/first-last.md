@@ -2,7 +2,8 @@
 
 {% tabs %}
 {% tab title="Definition" %}
-<pre><code><strong>sum(R) &#x3C;- {first(k.name): true}
-</strong></code></pre>
+```
+@(k, v) -> sum(R) <- {first(k.name): true}
+```
 {% endtab %}
 {% endtabs %}
