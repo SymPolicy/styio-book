@@ -1,15 +1,6 @@
-# Variable
+---
+description: Progamming Language
+---
 
-{% tabs %}
-{% tab title="Usage" %}
-```
-x = 0;
-```
-{% endtab %}
+# Styio
 
-{% tab title="Definition" %}
-```
-x := 0;
-```
-{% endtab %}
-{% endtabs %}

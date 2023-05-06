@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Variable](README.md)
+* [Styio](README.md)
+* [Variable](variable.md)
 * [Function](function/README.md)
   * [Closure (Anonymous Function)](function/closure-anonymous-function.md)
 
