@@ -2,7 +2,7 @@
 
 {% tabs %}
 {% tab title="Definition" %}
-<pre><code><strong>@(k, v) -> sum(R) -> {"maximum": max(v)}
+<pre><code><strong>R(k, v) +> max(k.revenue)
 </strong></code></pre>
 {% endtab %}
 {% endtabs %}

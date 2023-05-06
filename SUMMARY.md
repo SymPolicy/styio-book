@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Styio](README.md)
+* [Keywords](keywords.md)
 * [Variable](variable.md)
 * [Function](function/README.md)
   * [Closure (Anonymous Function)](function/closure-anonymous-function.md)
@@ -16,10 +17,13 @@
 * [while](control-flow/while.md)
 * [for](control-flow/for.md)
 * [if...else](control-flow/if...else.md)
+* [match](control-flow/match.md)
 
 ## Semi-Ring
 
-* [sum](semi-ring/sum.md)
-* [count](semi-ring/count.md)
-* [max / min](semi-ring/max-min.md)
-* [first / last](semi-ring/first-last.md)
+* [Aggregation](semi-ring/aggregation/README.md)
+  * [sum](semi-ring/aggregation/sum.md)
+  * [count](semi-ring/aggregation/count.md)
+  * [avg](semi-ring/aggregation/avg.md)
+  * [max / min](semi-ring/aggregation/max-min.md)
+  * [first / last](semi-ring/aggregation/first-last.md)

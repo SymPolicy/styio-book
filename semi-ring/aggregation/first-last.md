@@ -3,7 +3,7 @@
 {% tabs %}
 {% tab title="Definition" %}
 ```
-@(k, v) -> sum(R) -> {first(k.name): true}
+R(k, v) +> {first(k.name): true}
 ```
 {% endtab %}
 {% endtabs %}

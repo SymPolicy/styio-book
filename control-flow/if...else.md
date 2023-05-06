@@ -4,20 +4,22 @@
 {% tab title="Usage" %}
 ```
 ?(`expr`) {
-    ...
+    // then
 } : {
-    ...
+    // else
 }
+
+?(`expr`) [`then`: `else`]
 ```
 {% endtab %}
 
 {% tab title="Definition" %}
 ```
-?(`expr`) !(+): {
+?(`expr`) -> {
     ...
-} !(-): {
-    ...
-} 
+} : {
+    ... 
+}
 ```
 {% endtab %}
 {% endtabs %}
