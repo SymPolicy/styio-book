@@ -2,12 +2,14 @@
 
 * [Styio](README.md)
 * [Keywords](keywords.md)
-* [Variable](variable.md)
+* [Variable](variable/README.md)
+  * [Temporal Variable](variable/temporal-variable.md)
 * [Function](function/README.md)
   * [Closure (Anonymous Function)](function/closure-anonymous-function.md)
 
 ## Collection
 
+* [Tuple](collection/tuple.md)
 * [List](collection/list.md)
 * [Record](collection/record.md)
 * [Dictionary](collection/dictionary.md)

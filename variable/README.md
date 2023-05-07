@@ -3,7 +3,7 @@
 {% tabs %}
 {% tab title="Usage" %}
 ```
-x = 0;
+x = 0
 ```
 {% endtab %}
 

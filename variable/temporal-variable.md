@@ -1,0 +1,5 @@
+# Temporal Variable
+
+```
+@(x, y) ->
+```
