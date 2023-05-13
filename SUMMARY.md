@@ -1,8 +1,9 @@
 # Table of contents
 
 * [Styio](README.md)
+* [Smile!](smile.md)
 * [Keywords](keywords.md)
-* [Variable](variable/README.md)
+* [Variable](variable.md)
   * [Temporal Variable](variable/temporal-variable.md)
 * [Function](function/README.md)
   * [Closure (Anonymous Function)](function/closure-anonymous-function.md)
@@ -29,3 +30,7 @@
   * [avg](semi-ring/aggregation/avg.md)
   * [max / min](semi-ring/aggregation/max-min.md)
   * [first / last](semi-ring/aggregation/first-last.md)
+
+## Module
+
+* [import](module/import.md)

@@ -3,23 +3,29 @@
 {% tabs %}
 {% tab title="Usage" %}
 ```
-?(`expr`) {
+? (`expr`) {
     // then
 } : {
     // else
 }
 
-?(`expr`) [`then`: `else`]
+?(`expr`) [`then`:`else`]
 ```
 {% endtab %}
 
 {% tab title="Definition" %}
 ```
-?(`expr`) -> {
+? (`expr`) :) {
     ...
-} : {
+} :( {
     ... 
 }
+
+? (`expr`) [{
+    `then`
+} : {
+    `else`
+}]
 ```
 {% endtab %}
 {% endtabs %}
