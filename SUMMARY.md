@@ -9,6 +9,11 @@
   * [Closure (Anonymous Function)](function/closure-anonymous-function.md)
 * [Token](token.md)
 
+## Primitive Design
+
+* [BNF Form](primitive-design/bnf-form.md)
+* [Example](primitive-design/example.md)
+
 ## Collection
 
 * [Tuple](collection/tuple.md)
@@ -35,3 +40,4 @@
 ## Module
 
 * [import](module/import.md)
+* [Page 1](module/page-1.md)
