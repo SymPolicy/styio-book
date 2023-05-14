@@ -7,6 +7,7 @@
   * [Temporal Variable](variable/temporal-variable.md)
 * [Function](function/README.md)
   * [Closure (Anonymous Function)](function/closure-anonymous-function.md)
+* [Token](token.md)
 
 ## Collection
 
