@@ -41,6 +41,6 @@
 
 ## Module
 
-* [Entrance](module/entrance.md)
-* [Domain](module/domain.md)
+* [Entrance](module/import.md)
+* [Domain](module/page-1.md)
 * [Free Cursor](module/free-cursor.md)
