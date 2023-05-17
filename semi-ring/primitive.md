@@ -34,5 +34,5 @@ R(k, v)... | `expr` |
 
 // bring temporal variables into aggregation
 // means "decompose R, iterate each element as <k, v> pair"
-sum(R -> <k, v>) | `expr` |
+sum(R, <k, v>) | `expr` |
 ```
