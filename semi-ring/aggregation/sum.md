@@ -2,8 +2,9 @@
 
 {% tabs %}
 {% tab title="Definition" %}
-<pre class="language-markup"><code class="lang-markup"><strong>R(k, v) +> ?(k.revenue != ~) [k.revenue::0]
-</strong></code></pre>
+```markup
+R(k, v)... | sum(k.revenue) |
+```
 {% endtab %}
 {% endtabs %}
 

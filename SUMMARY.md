@@ -30,6 +30,7 @@
 
 ## Semi-Ring
 
+* [Primitive](semi-ring/primitive.md)
 * [Aggregation](semi-ring/aggregation/README.md)
   * [sum](semi-ring/aggregation/sum.md)
   * [count](semi-ring/aggregation/count.md)
