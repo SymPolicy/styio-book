@@ -15,6 +15,7 @@
 @(k, v) -> R -> [...] {
    // code block 
 }
+
 // the code block { `stmt`* `expr`* }
 // can be simplified to | `expr` | 
 // if there is one (and at most one) expression
@@ -27,4 +28,11 @@
 
 // simplify variables as function definition style
 R(k, v)... | `expr` |
+
+// add a default operator (aggregation function)
+@(k, v) -> sum(R) | `expr` |
+
+// bring temporal variables into aggregation
+// means "decompose R, iterate each element as <k, v> pair"
+sum(R -> <k, v>) | `expr` |
 ```
