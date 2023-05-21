@@ -14,6 +14,7 @@
 * [BNF Form](primitive-design/bnf-form.md)
 * [Example](primitive-design/example.md)
 * [Implementation](primitive-design/implementation.md)
+* [Block](primitive-design/block.md)
 
 ## Collection
 
