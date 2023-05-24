@@ -1,5 +1,5 @@
 # Temporal Variable
 
 ```
-@(x, y) -> `domain`
+@(x, y) >> `domain`
 ```
