@@ -24,10 +24,10 @@
  * Dependencies can be defined as a list of dependency items,
 <strong> *     with the delimiter ","
 </strong><strong> *   
-</strong> * # ["abc", "xyz", ...]
+</strong> * # ("abc", "xyz", ...)
  */
  
- Dependency := "[" DependencyItem ["," DependencyItem]* ~ "]"
+ Dependency := "(" DependencyItem ["," DependencyItem]* ~ ")"
 </code></pre>
 
 ### Dependency Item

@@ -52,3 +52,14 @@ Define an anonymous function with multiple arguments.
 
 @(x, y) -> { x + y }
 ```
+
+### Module
+
+```
+(
+  "///",
+  "///",
+) >> {
+  ...
+}
+```
