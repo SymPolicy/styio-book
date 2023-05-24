@@ -3,11 +3,15 @@
 * [Styio](README.md)
 * [Smile!](smile.md)
 * [Keywords](keywords.md)
+* [Type](type.md)
 * [Variable](variable.md)
-  * [Temporal Variable](variable/temporal-variable.md)
-* [Function](function/README.md)
-  * [Closure (Anonymous Function)](function/closure-anonymous-function.md)
+* [Function](function.md)
 * [Token](token.md)
+* [Page 1](page-1.md)
+
+## Symbol
+
+* [>> (Import)](symbol/greater-than-greater-than-import.md)
 
 ## Primitive Design
 

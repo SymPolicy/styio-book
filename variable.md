@@ -1,15 +1,25 @@
 # Variable
 
-{% tabs %}
-{% tab title="Usage" %}
-```
-x = 0
-```
-{% endtab %}
+### Define (Type Inference)
 
-{% tab title="Definition" %}
 ```
-x := 0;
+@(x)
 ```
-{% endtab %}
-{% endtabs %}
+
+### Assign
+
+```
+x = 1
+```
+
+### Define + Assign
+
+```
+x := 1
+```
+
+### Define + Optional Type
+
+```
+@(x: [int|float]?)
+```
