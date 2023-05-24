@@ -1,4 +1,8 @@
-# >> (Import)
+---
+description: Load external resources and redirect to the right.
+---
+
+# >> (Forward Redirect)
 
 ## Variable
 
@@ -7,7 +11,7 @@
 Import unassigned variable into a code block.
 
 ```
-@(x <int> = 0, y <float> = 0.0) >> { ... }
+@(x: int = 0, y: float = 0.0) >> { ... }
 ```
 
 \* The **types** of variables can be&#x20;
@@ -15,8 +19,6 @@ Import unassigned variable into a code block.
 &#x20;   either => **declared in the definition**&#x20;
 
 &#x20;   or => **automatically inferenced in the block.**
-
-\*\*&#x20;
 
 \*\* _Warning: The unassigned variable \`x\` is never used and is therefore discarded._
 
@@ -34,7 +36,9 @@ Define local variables which only live in the scope of a function.
 
 ## Dependency
 
-1. Import external packages (dependencies) into a code space.
+#### >> Space
+
+Import external packages (dependencies) into a code space.
 
 ```
 ("math", "time") >> { ... }

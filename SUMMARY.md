@@ -5,13 +5,22 @@
 * [Keywords](keywords.md)
 * [Type](type.md)
 * [Variable](variable.md)
-* [Function](function.md)
+* [Function](function/README.md)
 * [Token](token.md)
-* [Page 1](page-1.md)
 
 ## Symbol
 
-* [>> (Import)](symbol/greater-than-greater-than-import.md)
+* [>> (Forward Redirect)](symbol/greater-than-greater-than-forward-redirect.md)
+* [<< (Backward Redirect)](symbol/less-than-less-than-backward-redirect.md)
+* [<-| (Import <- Pipeline)](symbol/less-than-or-import-less-than-pipeline.md)
+* [|-> (Pipeline -> Export)](symbol/or-greater-than-pipeline-greater-than-export.md)
+* [<\~| (Auto Cast <\~ Pipeline)](symbol/less-than-or-auto-cast-less-than-pipeline.md)
+* [|\~> (Pipeline \~> Auto Cast)](symbol/or-greater-than-pipeline-greater-than-auto-cast.md)
+* [$" " (String Interpolation)](symbol/usd-string-interpolation.md)
+* [@" " (Verbatim Text)](symbol/verbatim-text.md)
+* [?= { => , \_ => } (Match)](symbol/greater-than-\_-greater-than-match/README.md)
+  * [?= (Equal or Not?)](symbol/greater-than-\_-greater-than-match/equal-or-not.md)
+  * [=> (Branch)](symbol/greater-than-\_-greater-than-match/greater-than-branch.md)
 
 ## Primitive Design
 
