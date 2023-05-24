@@ -9,13 +9,13 @@
  */
  
  Program :=
-    &#x3C;= {
+    | {
         (Dependency ">>")? 
         
         Space
     }
     
-<strong>    &#x3C;= Block
+<strong>    | Block
 </strong></code></pre>
 
 ## Dependency
@@ -50,7 +50,7 @@
  */
 
 Space := 
-    <= {
+    | {
         [VarDef]?
         [FuncDef]?
         [Block]?
@@ -88,8 +88,8 @@ Block := [Stmt]* [Expr]?
  * Everything is an expression.
  */
  
-Expr := 
-        <= FreeVarDef
+Expr := FreeVarDef
+      | 
 ```
 
 ## Variable Definition
