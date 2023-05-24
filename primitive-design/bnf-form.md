@@ -5,8 +5,8 @@ VAR_DEF := "@" "(" <ID> ")"
          | "@" "(" [<ID> ["," <ID>]*]? ")"
 
 FUNC_DEF := <ID> ":=" <DOMAIN> 
-          | [<VAR_DEF>]? ["->"]? <ID> ":=" <DOMAIN>
-          | [<VAR_DEF>]? ["->"]? <DOMAIN>
+          | [<VAR_DEF>]? [">>"]? <ID> ":=" <DOMAIN>
+          | [<VAR_DEF>]? [">>"]? <DOMAIN>
 
 DOMAIN := "{" <BLOCK> "}"
 

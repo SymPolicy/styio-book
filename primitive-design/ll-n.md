@@ -10,7 +10,7 @@
  
  Program :=
     &#x3C;= {
-        (Dependency "->")? 
+        (Dependency ">>")? 
         
         Space
     }
@@ -27,7 +27,7 @@
 </strong> * # ("abc", "xyz", ...)
  */
  
- Dependency := "(" DependencyItem ["," DependencyItem]* ~ ")"
+ Dependency := "(" DependencyItem ["," DependencyItem]* ")"
 </code></pre>
 
 ### Dependency Item

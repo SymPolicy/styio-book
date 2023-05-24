@@ -13,7 +13,7 @@
 }
 
 // record
-"<" [<ID> ":" <EXPR> ["," <ID> ":" <EXPR>]*]? ">"
+"<" [<ID> "=" <EXPR> ["," <ID> "=" <EXPR>]*]? ">"
 
 // dictionary
 "{" [<ID> "->" <EXPR> ["," <ID> "->" <EXPR>]*]? "}"

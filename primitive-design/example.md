@@ -38,9 +38,9 @@ f := { ... }
 Define a function with multiple arguments.
 
 ```
-// [<VAR_DEF>]? ["->"]? <ID> ":=" <DOMAIN>
+// [<VAR_DEF>]? [">>"]? <ID> ":=" <DOMAIN>
 
-@(x, y) -> f := { ... }
+@(x, y) >> f := { ... }
 ```
 
 **Example 3.**
@@ -48,18 +48,18 @@ Define a function with multiple arguments.
 Define an anonymous function with multiple arguments.
 
 ```
-// [<VAR_DEF>]? ["->"]? <DOMAIN>
+// [<VAR_DEF>]? [">>"]? <DOMAIN>
 
-@(x, y) -> { x + y }
+@(x, y) >> { x + y }
 ```
 
 ### Module
 
 ```
 (
-  "///",
-  "///",
-) >> {
+  " ",
+  " ",
+) >> `name` := {
   ...
 }
 ```
