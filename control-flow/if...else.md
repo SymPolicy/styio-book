@@ -3,10 +3,13 @@
 {% tabs %}
 {% tab title="Usage" %}
 ```
+// if
 ? (`expr`) {
     // then
+} : ? (`expr`) {
+    // else if
 } : {
-    // else
+    // else 
 }
 
 ?(`expr`) [`then`:`else`]

@@ -2,15 +2,16 @@
 
 {% tabs %}
 {% tab title="Usage" %}
-<pre><code>@(i) [0..10] {
-<strong>    ...
-</strong>}
-</code></pre>
+```
+@i[0..10] +> {
+    ...
+}
+```
 {% endtab %}
 
 {% tab title="Definition" %}
 ```
-@(i) -> [0..10] -> {
+@(i) >> [0..10] /> {
     ...
 }
 ```
