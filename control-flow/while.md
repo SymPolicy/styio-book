@@ -3,7 +3,7 @@
 ## Loop Forever
 
 ```
-[...] +> {
+[...] {
     ...
 }
 ```
@@ -27,7 +27,7 @@ while True:
 ### + Break
 
 ```
-[...] +> {
+[...] {
     ...
     
     ! -> _;
@@ -44,7 +44,7 @@ while True:
 
 {% tabs %}
 {% tab title="Usage" %}
-<pre><code><strong>[...] +> {
+<pre><code><strong>[...] {
 </strong>    ...
     
     !?(`expr`) -> _;
@@ -54,7 +54,7 @@ while True:
 
 {% tab title="Definition" %}
 ```
-[...] -> {
+[...] +> {
     ...
     
     ! -> ?(`expr`) -> _;
@@ -97,7 +97,7 @@ while True:
 {% tabs %}
 {% tab title="Usage" %}
 ```
-[...] +> {
+[...] {
     ...
     
     ! -> { };
@@ -107,7 +107,7 @@ while True:
 
 {% tab title="Definition" %}
 ```
-[...] -> {
+[...] +> {
     ...
     
     ! -> {};

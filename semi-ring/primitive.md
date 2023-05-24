@@ -12,7 +12,7 @@
 // send R to a loop
 // R will be cast to an iterator
 // operations in code block will apply to each element (key-value pair) of R
-@(k, v) >> R ~ [...] +> {
+@(k, v) >> R ~> [...] +> {
    // code block 
 }
 
@@ -20,7 +20,7 @@
 // can be simplified to | `expr` | 
 // if there is one (and at most one) expression
 // and no statements
-@(k, v) >> R ~ [...] +> | `expr` |
+@(k, v) >> R ~> [...] +> | `expr` |
 
 // the loop R[...]
 // can be simplified as R...
