@@ -2,7 +2,7 @@
 description: Load external resources and redirect to the right.
 ---
 
-# >> (Forward Redirect)
+# -> (Forward Redirect)
 
 ## Variable
 
@@ -11,7 +11,7 @@ description: Load external resources and redirect to the right.
 Import unassigned variable into a code block.
 
 ```
-@(x: int = 0, y: float = 0.0) >> { ... }
+@(x: int = 0, y: float = 0.0) -> { ... }
 ```
 
 \* The **types** of variables can be&#x20;
@@ -27,12 +27,10 @@ Import unassigned variable into a code block.
 Define local variables which only live in the scope of a function.
 
 ```
-@(x, y) >> f := {
+@(x, y) -> f := {
     ...
 }
 ```
-
-
 
 ## Dependency
 
@@ -40,6 +38,15 @@ Define local variables which only live in the scope of a function.
 
 Import external packages (dependencies) into a code space.
 
-```
-("math", "time") >> { ... }
-```
+<pre><code><strong>$(
+</strong> "math", 
+ "time",
+) >> { ... }
+</code></pre>
+
+## OS Read/Write
+
+#### Export to CSV file. (Auto Cast)
+
+<pre><code><strong>data -> $("data.csv")
+</strong></code></pre>

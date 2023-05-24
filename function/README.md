@@ -11,7 +11,12 @@ f(x, y) {
 
 {% tab title="Definition" %}
 ```
-@(x, y) >> f := {
+/*
+ * Define a function `f` with a block.
+ * Bring variables into the scope of `f`.
+ */
+
+@(x, y) -> f := {
     ...
 } 
 ```
@@ -33,11 +38,15 @@ f(x, y) {
 
 {% tab title="Definition" %}
 ```
-@(x, y) := {
+/*
+ * Bring variables into the expression.
+ */
+
+@(x, y) -> {
     x + y
 }
 
-@(x, y) := | x + y |
+@(x, y) -> | x + y |
 ```
 {% endtab %}
 {% endtabs %}

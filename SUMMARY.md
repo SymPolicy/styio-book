@@ -10,14 +10,10 @@
 
 ## Symbol
 
-* [>> (Forward Redirect)](symbol/greater-than-greater-than-forward-redirect.md)
-* [<< (Backward Redirect)](symbol/less-than-less-than-backward-redirect.md)
-* [<-| (Import <- Pipeline)](symbol/less-than-or-import-less-than-pipeline.md)
-* [|-> (Pipeline -> Export)](symbol/or-greater-than-pipeline-greater-than-export.md)
-* [<\~| (Auto Cast <\~ Pipeline)](symbol/less-than-or-auto-cast-less-than-pipeline.md)
-* [|\~> (Pipeline \~> Auto Cast)](symbol/or-greater-than-pipeline-greater-than-auto-cast.md)
-* [$" " (String Interpolation)](symbol/usd-string-interpolation.md)
-* [@" " (Verbatim Text)](symbol/verbatim-text.md)
+* [-> (Forward Redirect)](symbol/greater-than-forward-redirect.md)
+* [<- (Backward Redirect)](symbol/less-than-backward-redirect.md)
+* [$ (I/O Buffer)](symbol/usd-i-o-buffer.md)
+* [%" " (Format String)](symbol/format-string.md)
 * [?= { => , \_ => } (Match)](symbol/greater-than-\_-greater-than-match/README.md)
   * [?= (Equal or Not?)](symbol/greater-than-\_-greater-than-match/equal-or-not.md)
   * [=> (Branch)](symbol/greater-than-\_-greater-than-match/greater-than-branch.md)
