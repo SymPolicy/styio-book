@@ -145,7 +145,7 @@ while True:
 ### + Condition
 
 ```
-[...] ?(`expr`) +> {
+[...] ?(`expr`) >> {
     ...
 }
 ```
@@ -178,7 +178,7 @@ while `expr`:
 ### + Increment Element
 
 ```
-[0..i] +> {
+[0..i] >> {
     ...
 }
 ```
