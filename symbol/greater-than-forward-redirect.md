@@ -41,7 +41,7 @@ Import external packages (dependencies) into a code space.
 <pre><code><strong>$(
 </strong> "math", 
  "time",
-) >> { ... }
+) -> { ... }
 </code></pre>
 
 ## OS Read/Write
