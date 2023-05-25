@@ -43,3 +43,19 @@ Import external packages (dependencies) into a code space.
  "time",
 ) -> { ... }
 </code></pre>
+
+## Read (Import)
+
+#### => Mutable
+
+```
+@(d) <- @("./data.json"); // Comprehensive
+
+@(d <- "./data.json"); // Recursive
+```
+
+#### => Immutable
+
+```
+d := <- @("./data.json");
+```

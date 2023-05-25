@@ -4,8 +4,8 @@ description: 'Backward Redirect: Load resource and redirect to the left.'
 
 # <-
 
-#### Read from CSV File (Auto Cast)
+### Write (Export)
 
 ```
-@(data) <- $("/path/to/data.csv")
+d -> @("./data.json");
 ```
