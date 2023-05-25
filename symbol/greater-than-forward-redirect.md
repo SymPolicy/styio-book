@@ -38,7 +38,7 @@ Define local variables which only live in the scope of a function.
 
 Import external packages (dependencies) into a code space.
 
-<pre><code><strong>$(
+<pre><code><strong>@(
 </strong> "math", 
  "time",
 ) -> { ... }
