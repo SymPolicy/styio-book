@@ -21,3 +21,26 @@ Styio's resource identifier can be:
 5. Struct Type
 6. Trait Type
 
+## Standard IO
+
+### Read
+
+#### => Mutable
+
+```
+@(d) <- @("./data.json"); // Comprehensive
+
+@(d <- "./data.json"); // Recursive
+```
+
+#### => Immutable
+
+```
+d := <- @("./data.json");
+```
+
+#### Write
+
+```
+d -> @("./data.json");
+```

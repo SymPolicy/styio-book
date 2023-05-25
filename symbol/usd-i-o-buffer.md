@@ -7,25 +7,3 @@
 ```
 $: ("Hello, World!")
 ```
-
-## Standard IO
-
-### Read
-
-#### => Mutable
-
-```
-@(d) <- $("./data.json");
-```
-
-#### => Immutable
-
-```
-d := <- $("./data.json");
-```
-
-#### Write
-
-```
-d -> $("./data.json");
-```
