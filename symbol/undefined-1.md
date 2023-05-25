@@ -1,4 +1,8 @@
-# %" " (Format String)
+---
+description: Format String
+---
+
+# %
 
 <pre><code>name := "Styio";
 <strong>

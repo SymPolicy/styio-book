@@ -1,8 +1,8 @@
 ---
-description: Load external resources and redirect to the right.
+description: 'Forward Redirect: Load resource and redirect to the right.'
 ---
 
-# -> (Forward Redirect)
+# ->
 
 ## Variable
 

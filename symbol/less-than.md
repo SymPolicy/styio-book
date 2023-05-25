@@ -1,8 +1,8 @@
 ---
-description: Load external resources and redirect to the left.
+description: 'Backward Redirect: Load resource and redirect to the left.'
 ---
 
-# <- (Backward Redirect)
+# <-
 
 #### Read from CSV File (Auto Cast)
 

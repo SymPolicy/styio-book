@@ -31,7 +31,7 @@
 @(x, y) = (1, 2);
 
 /*
- * Adaptive Assignment (<~)
+ * Adaptive Transformation (<~)
  * 1. Define `x` and `y`.
  * 2. Define a tuple (1, 2)
  * 3. Deconstruct (1, 2)

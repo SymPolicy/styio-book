@@ -10,17 +10,18 @@
 
 ## Symbol
 
-* [-> (Forward Redirect)](symbol/greater-than-forward-redirect.md)
-* [<- (Backward Redirect)](symbol/less-than-backward-redirect.md)
-* [$ (I/O Buffer)](symbol/usd-i-o-buffer.md)
-* [%" " (Format String)](symbol/format-string.md)
-* [?= { => , \_ => } (Match)](symbol/greater-than-\_-greater-than-match/README.md)
-  * [?= (Equal or Not?)](symbol/greater-than-\_-greater-than-match/equal-or-not.md)
-  * [=> (Branch)](symbol/greater-than-\_-greater-than-match/greater-than-branch.md)
+* [@](symbol/undefined.md)
+* [->](symbol/greater-than.md)
+* [<-](symbol/less-than.md)
+* [$](symbol/usd.md)
+* [%](symbol/undefined-1.md)
+* [?= { => , \_ => }](symbol/greater-than-\_-greater-than/README.md)
+  * [?=](symbol/greater-than-\_-greater-than/undefined.md)
+  * [=>](symbol/greater-than-\_-greater-than/greater-than.md)
 
 ***
 
-* [<: (Inherit)](less-than-inherit.md)
+* [<:](less-than.md)
 
 ## Primitive Design
 

@@ -55,11 +55,9 @@ Define an anonymous function with multiple arguments.
 
 ### Module
 
-```
-(
-  " ",
-  " ",
-) >> `name` := {
+<pre><code><strong>@(
+</strong>  "query",
+) >> main := {
   ...
 }
-```
+</code></pre>
