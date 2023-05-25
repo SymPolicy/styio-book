@@ -4,15 +4,15 @@
 {% tab title="Usage" %}
 ```
 // if
-? (`expr`) {
+(`expr`) ? {
     // then
-} : ? (`expr`) {
+} : (`expr`) ? {
     // else if
 } : {
     // else 
 }
 
-?(`expr`) [`then`:`else`]
+(`expr`) ? `then` : `else`
 ```
 {% endtab %}
 
@@ -23,12 +23,6 @@
 } :( {
     ... 
 }
-
-? (`expr`) [{
-    `then`
-} : {
-    `else`
-}]
 ```
 {% endtab %}
 {% endtabs %}
