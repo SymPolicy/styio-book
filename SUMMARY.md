@@ -18,6 +18,10 @@
   * [?= (Equal or Not?)](symbol/greater-than-\_-greater-than-match/equal-or-not.md)
   * [=> (Branch)](symbol/greater-than-\_-greater-than-match/greater-than-branch.md)
 
+***
+
+* [<: (Inherit)](less-than-inherit.md)
+
 ## Primitive Design
 
 * [BNF Form](primitive-design/bnf-form.md)

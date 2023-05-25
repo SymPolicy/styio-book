@@ -2,7 +2,7 @@
 
 <pre><code>name := "Styio";
 <strong>
-</strong><strong>$: "This is {name}";
+</strong><strong>$: %"This is {name}";
 </strong></code></pre>
 
 \*\* C# [https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated)
