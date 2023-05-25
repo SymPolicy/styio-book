@@ -43,10 +43,3 @@ Import external packages (dependencies) into a code space.
  "time",
 ) -> { ... }
 </code></pre>
-
-## OS Read/Write
-
-#### Export to CSV file. (Auto Cast)
-
-<pre><code><strong>data -> $("data.csv")
-</strong></code></pre>
