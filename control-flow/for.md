@@ -1,7 +1,19 @@
 # for
 
+#### Definition
+
+```
+[...] >> {
+    ...
+    
+    ? (`expr`) -> {
+        ! -> ();
+    }
+}
+```
+
 {% tabs %}
-{% tab title="Usage" %}
+{% tab title="Syntax Sugar" %}
 ```
 @i[0..10] >> {
     ...
@@ -9,7 +21,7 @@
 ```
 {% endtab %}
 
-{% tab title="Definition" %}
+{% tab title="Usage" %}
 ```
 @(i) -> [0..10] >> {
     ...

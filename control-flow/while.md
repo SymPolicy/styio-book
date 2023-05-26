@@ -3,7 +3,7 @@
 ## Loop Forever
 
 ```
-[...] {
+[...] >> {
     ...
 }
 ```
@@ -30,7 +30,7 @@ while True:
 [...] {
     ...
     
-    ! -> _;
+    ! -> ();
 }
 ```
 
@@ -39,25 +39,29 @@ while True:
 ```
 // macro start: check `expr` and then reset this code block
 
-! -> ?() -> _ 
+? (`expr`) -> {
+    ! -> ();
+}
 ```
 
 {% tabs %}
 {% tab title="Usage" %}
-<pre><code><strong>[...] {
+<pre><code><strong>[...] >> {
 </strong>    ...
     
-    !?(`expr`) -> _;
+    !?(`expr`) -> ();
 }
 </code></pre>
 {% endtab %}
 
 {% tab title="Definition" %}
 ```
-[...] +> {
+[...] >> {
     ...
     
-    ?(`expr`) -> ();
+    ? (`expr`) -> {
+        ! -> ();
+    }
 }
 ```
 {% endtab %}
@@ -91,26 +95,28 @@ while True:
 ```
 // macro start: do nothing
 
-! -> {} 
+! >>;
 ```
 
 {% tabs %}
 {% tab title="Usage" %}
 ```
-[...] {
+[...] >> {
     ...
     
-    ! -> { };
+    !?(`expr`) >>;
 }
 ```
 {% endtab %}
 
 {% tab title="Definition" %}
 ```
-[...] +> {
+[...] >> {
     ...
     
-    ! -> {};
+    ?(`expr`) -> {
+        ! >> {};
+    };
 }
 ```
 {% endtab %}

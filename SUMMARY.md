@@ -14,7 +14,7 @@
 * [?= { => , \_ => }](symbol/greater-than-\_-greater-than-match/README.md)
   * [?=](symbol/greater-than-\_-greater-than-match/equal-or-not.md)
   * [=>](symbol/greater-than-\_-greater-than-match/greater-than-branch.md)
-* [<:](symbol/less-than-inherit.md)
+* [<:](less-than-inherit.md)
 
 ## Primitive Design
 
@@ -58,6 +58,6 @@
 
 ## Archive
 
-* [Smile!](archive/smile.md)
-* [Keywords](archive/keywords.md)
-* [Type](archive/type.md)
+* [Smile!](smile.md)
+* [Keywords](keywords.md)
+* [Type](type.md)

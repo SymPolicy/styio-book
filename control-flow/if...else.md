@@ -1,5 +1,21 @@
 # if...else
 
+#### Basic
+
+```
+// if -> then
+? (`expr`) -> {
+    ...
+}
+
+// else
+? !(`expr`) -> {
+    ...
+}
+```
+
+#### Simplify
+
 ```
 ? (`expr`) :) {
     ...
