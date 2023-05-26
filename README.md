@@ -1,6 +1,1 @@
----
-description: Progamming Language
----
-
-# Styio
-
+# [Styio Book](https://sympolicy.gitbook.io/styio-book/)
