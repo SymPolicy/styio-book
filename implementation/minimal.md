@@ -23,7 +23,7 @@
 \=> Immutable (Fixed Variable)
 
 ```
-<ID> ":""=" <EXPR> ";"
+<ID> ":=" <EXPR> ";"
 ```
 
 #### Unary Operation
