@@ -42,8 +42,12 @@ BIN_EXPR := <EXPR> "+" <EXPR>
 ```
 
 ```
-          | <EXPR> "==" <EXPR>
+          | <EXPR> ">" <EXPR>
+          | <EXPR> ">=" <EXPR>
           | <EXPR> "<" <EXPR>
+          | <EXPR> "<=" <EXPR>
+          | <EXPR> "==" <EXPR>
+          | <EXPR> "!=" <EXPR>
 ```
 
 ```
@@ -57,5 +61,23 @@ BIN_EXPR := <EXPR> "+" <EXPR>
 [...] >> {
     <STMT>*
     <EXPR>?
+}
+```
+
+#### IF...Then
+
+```
+? (`expr`) -> {
+    ...
+}
+```
+
+#### IF...Else
+
+```
+? (`expr`) :) {
+    ...
+} :( {
+    ...
 }
 ```
