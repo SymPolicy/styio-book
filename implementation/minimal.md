@@ -42,9 +42,8 @@ BIN_EXPR := <EXPR> "+" <EXPR>
 ```
 
 ```
-          | <EXPR> ">" <EXPR>
-          | <EXPR> "<" <EXPR>
           | <EXPR> "==" <EXPR>
+          | <EXPR> "<" <EXPR>
 ```
 
 ```
