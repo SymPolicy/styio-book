@@ -22,6 +22,10 @@
 * [LL(n)](primitive-design/ll-n.md)
 * [Example](primitive-design/example.md)
 
+## Implementation
+
+* [Minimal](implementation/minimal.md)
+
 ## Collection
 
 * [Tuple](collection/tuple.md)

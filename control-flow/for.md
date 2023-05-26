@@ -3,32 +3,32 @@
 #### Definition
 
 ```
+@(i): int = 0;
 [...] >> {
     ...
     
-    ? (`expr`) -> {
+    i = i + 1;
+    ?(a == 10) -> {
         ! -> ();
-    }
+    };
 }
 ```
 
-{% tabs %}
-{% tab title="Syntax Sugar" %}
-```
-@i[0..10] >> {
-    ...
-}
-```
-{% endtab %}
+#### Simplify
 
-{% tab title="Usage" %}
 ```
 @(i) -> [0..10] >> {
     ...
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+#### Syntax Sugar
+
+```
+@i[0..10] >> {
+    ...
+}
+```
 
 {% tabs %}
 {% tab title="Python" %}
