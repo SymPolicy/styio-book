@@ -1,22 +1,5 @@
 # if...else
 
-{% tabs %}
-{% tab title="Usage" %}
-```
-// if
-(`expr`) ? {
-    // then
-} : (`expr`) ? {
-    // else if
-} : {
-    // else 
-}
-
-(`expr`) ? `then` : `else`
-```
-{% endtab %}
-
-{% tab title="Definition" %}
 ```
 ? (`expr`) :) {
     ...
@@ -24,8 +7,6 @@
     ... 
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 {% tabs %}
 {% tab title="Java" %}
@@ -47,3 +28,9 @@ else:
 ```
 {% endtab %}
 {% endtabs %}
+
+### Ternary Operator
+
+```
+(`expr`) ? `then` : `else`
+```

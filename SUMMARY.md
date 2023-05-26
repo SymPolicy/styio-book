@@ -1,12 +1,8 @@
 # Table of contents
 
 * [Styio](README.md)
-* [Smile!](smile.md)
-* [Keywords](keywords.md)
-* [Type](type.md)
 * [Variable](variable.md)
 * [Function](function/README.md)
-* [Token](token.md)
 
 ## Symbol
 
@@ -18,18 +14,13 @@
 * [?= { => , \_ => }](symbol/greater-than-\_-greater-than-match/README.md)
   * [?=](symbol/greater-than-\_-greater-than-match/equal-or-not.md)
   * [=>](symbol/greater-than-\_-greater-than-match/greater-than-branch.md)
-
-***
-
-* [<:](less-than-inherit.md)
+* [<:](symbol/less-than-inherit.md)
 
 ## Primitive Design
 
-* [BNF Form](primitive-design/bnf-form.md)
+* [BNF](primitive-design/bnf-form.md)
 * [LL(n)](primitive-design/ll-n.md)
 * [Example](primitive-design/example.md)
-* [Implementation](primitive-design/implementation.md)
-* [Block](primitive-design/block.md)
 
 ## Collection
 
@@ -40,9 +31,9 @@
 
 ## Control Flow
 
+* [if...else](control-flow/if...else.md)
 * [while](control-flow/while.md)
 * [for](control-flow/for.md)
-* [if...else](control-flow/if...else.md)
 * [match](control-flow/match.md)
 
 ## Semi-Ring
@@ -60,3 +51,13 @@
 * [Entrance](module/import.md)
 * [Domain](module/page-1.md)
 * [Free Cursor](module/free-cursor.md)
+
+## Deprecated
+
+* [Page 1](deprecated/page-1.md)
+
+## Archive
+
+* [Smile!](archive/smile.md)
+* [Keywords](archive/keywords.md)
+* [Type](archive/type.md)
