@@ -30,7 +30,7 @@ while True:
 [...] {
     ...
     
-    ! -> ();
+    ! -> ~
 }
 ```
 
@@ -40,7 +40,7 @@ while True:
 // macro start: check `expr` and then reset this code block
 
 ? (`expr`) -> {
-    ! -> ();
+    ! -> ~
 }
 ```
 
@@ -49,7 +49,7 @@ while True:
 <pre><code><strong>[...] >> {
 </strong>    ...
     
-    !?(`expr`) -> ();
+    !?(`expr`) -> ~
 }
 </code></pre>
 {% endtab %}
@@ -60,7 +60,7 @@ while True:
     ...
     
     ? (`expr`) -> {
-        ! -> ();
+        ! -> ~
     }
 }
 ```
@@ -95,7 +95,7 @@ while True:
 ```
 // macro start: do nothing
 
-! >>;
+! >> {};
 ```
 
 {% tabs %}
