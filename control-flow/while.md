@@ -95,7 +95,7 @@ while True:
 ```
 // macro start: do nothing
 
-! >> {};
+! >> {}
 ```
 
 {% tabs %}
@@ -104,7 +104,7 @@ while True:
 [...] >> {
     ...
     
-    !?(`expr`) >>;
+    !?(`expr`) >>
 }
 ```
 {% endtab %}
@@ -115,7 +115,7 @@ while True:
     ...
     
     ?(`expr`) -> {
-        ! >> {};
+        ! >> {}
     };
 }
 ```
