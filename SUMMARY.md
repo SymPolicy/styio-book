@@ -56,6 +56,10 @@
 * [Domain](module/page-1.md)
 * [Free Cursor](module/free-cursor.md)
 
+## Contribution
+
+* [Commit Message](contribution/commit-message.md)
+
 ## Deprecated
 
 * [Page 1](deprecated/page-1.md)
