@@ -30,6 +30,13 @@
 * [Minimal](implementation/minimal.md)
 * [Cases](implementation/cases.md)
 
+## Control Flow
+
+* [if...else](control-flow/if...else.md)
+* [while](control-flow/while.md)
+* [for](control-flow/for.md)
+* [match](control-flow/match.md)
+
 ## Collection
 
 * [Tuple](collection/tuple.md)
@@ -37,12 +44,9 @@
 * [Record](collection/record.md)
 * [Dictionary](collection/dictionary.md)
 
-## Control Flow
+## Iterator
 
-* [if...else](control-flow/if...else.md)
-* [while](control-flow/while.md)
-* [for](control-flow/for.md)
-* [match](control-flow/match.md)
+* [Dictionary](iterator/dictionary.md)
 
 ## Semi-Ring
 
