@@ -1,5 +1,9 @@
 # @
 
+{% hint style="info" %}
+Resources are everything that are accessible.
+{% endhint %}
+
 The `@` symbol is usually followed by a resource identifier.
 
 ```
