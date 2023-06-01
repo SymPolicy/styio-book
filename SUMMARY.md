@@ -7,7 +7,9 @@
 ## Symbol
 
 * [@](symbol/undefined.md)
-* [->](symbol/greater-than-forward-redirect/README.md)
+* [->](symbol/greater-than-forward-redirect.md)
+  * [Embedding](symbol/greater-than-forward-redirect/embedding.md)
+  * [Extraction](symbol/greater-than-forward-redirect/extraction.md)
   * [One-To-One (Bijection)](symbol/greater-than-forward-redirect/one-to-one-bijection.md)
 * [<-](symbol/less-than-backward-redirect.md)
 * [$](symbol/usd-i-o-buffer.md)
