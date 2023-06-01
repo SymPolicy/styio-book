@@ -6,8 +6,7 @@
 
 ## Symbol
 
-* [@](symbol/undefined/README.md)
-  * [Cases](symbol/undefined/cases.md)
+* [@](symbol/undefined.md)
 * [->](symbol/greater-than-forward-redirect.md)
 * [<-](symbol/less-than-backward-redirect.md)
 * [$](symbol/usd-i-o-buffer.md)
@@ -26,6 +25,7 @@
 ## Implementation
 
 * [Minimal](implementation/minimal.md)
+* [Cases](implementation/cases.md)
 
 ## Collection
 

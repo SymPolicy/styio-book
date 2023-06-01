@@ -27,7 +27,7 @@ BIN_EXPR := <EXPR> "+" <EXPR>
           | <EXPR> "-" <EXPR>
           | <EXPR> "*" <EXPR>
           | <EXPR> "/" <EXPR>
-          | <EXPR> "^" <EXPR>
+          | <EXPR> "**" <EXPR>
           | <EXPR> "%" <EXPR>
           
           | <EXPR> ">" <EXPR>
@@ -45,8 +45,8 @@ COLLECTION := "(" [<EXPR> ["," <EXPR>]*]? ")"
             | "{" [<EXPR> [":" <EXPR>]*]? "}"
             | "<" [<ID> "=" <EXPR> ["," <ID> "=" <EXPR>]*]? ">"
             
-LITERAL := <BOOLEAN>
-         | <INTEGER>
+LITERAL := <BOOL>
+         | <INT>
          | <FLOAT>
          | <STRING>
 
