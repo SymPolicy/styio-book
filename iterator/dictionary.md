@@ -11,23 +11,12 @@
 #### Sugar <- Ruby Style
 
 ```
-// k : key
-// v : value
-
 D >> { |k, v|
-    ...
-}
-
-// x : tuple
-// x[0] : key
-// x[1] : value
-
-D >> { |x|
     ...
 }
 ```
 
-#### Sugar <- "Evil" Style
+#### Sugar <- Chaotic-Evil Style
 
 ```
 D(k, v) >> {
