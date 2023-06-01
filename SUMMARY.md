@@ -6,7 +6,8 @@
 
 ## Symbol
 
-* [@](symbol/undefined.md)
+* [@](symbol/undefined/README.md)
+  * [Cases](symbol/undefined/cases.md)
 * [->](symbol/greater-than-forward-redirect.md)
 * [<-](symbol/less-than-backward-redirect.md)
 * [$](symbol/usd-i-o-buffer.md)
