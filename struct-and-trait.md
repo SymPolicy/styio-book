@@ -1,11 +1,67 @@
 # Struct & Trait
 
+## Struct
+
+#### Styio Native
+
 ```
-Person(name, addr) <: (Eq, Add, Sub, Mul) := {
+@(x: float, y: float) -> @Point
+
+@Point <- @(x: float, y: float)
+
+@Point <- (x: float, y: float)
+
+@Point(x: float, y: float)
+```
+
+#### Sugar
+
+```
+@Point(x: float, y: float)
+```
+
+
+
+```
+Person(name, addr) <: (Eq, Add, Mul) := {
+    name :: {
     
+    }
+    
+    Eq :: {
+    
+    }
+    
+    Add :: {
+    
+    }
+    
+    #? + (x) {
+        
+    }
+    
+    - #? {
+    
+    }
 }
 ```
 
 ```
-f(x, y) := | x + y |
+Person :: {
+    name :: {
+        
+    }
+    
+    addr :: {
+        
+    }
+
+    getAddr() := {
+        
+    }
+    
+    getName() := {
+    
+    }
+}
 ```
