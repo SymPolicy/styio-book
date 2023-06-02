@@ -3,6 +3,8 @@
 * [Styio](README.md)
 * [Variable](variable.md)
 * [Function](function/README.md)
+* [Struct & Trait](struct-and-trait.md)
+* [Operator Overloading](operator-overloading.md)
 
 ## Symbol
 
@@ -12,8 +14,8 @@
   * [Extraction](symbol/greater-than-forward-redirect/extraction.md)
   * [One-To-One (Bijection)](symbol/greater-than-forward-redirect/one-to-one-bijection.md)
 * [<-](symbol/less-than-backward-redirect.md)
-* [$](symbol/usd-i-o-buffer.md)
-* [%](symbol/format-string.md)
+* [>\_](symbol/usd-i-o-buffer.md)
+* [$](symbol/format-string.md)
 * [?= { => , \_ => }](symbol/greater-than-\_-greater-than-match/README.md)
   * [?=](symbol/greater-than-\_-greater-than-match/equal-or-not.md)
   * [=>](symbol/greater-than-\_-greater-than-match/greater-than-branch.md)
@@ -46,7 +48,10 @@
 
 ## Iterator
 
-* [Dictionary](iterator/dictionary.md)
+* [Iterator: Infinite Loop](iterator/iterator-infinite-loop.md)
+* [Iterator: Tuple / List](iterator/iterator-tuple-list.md)
+* [Iterator: Dictionary](iterator/iterator-dictionary.md)
+* [Iterator: Any](iterator/iterator-any.md)
 
 ## Semi-Ring
 

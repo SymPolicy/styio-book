@@ -1,9 +1,9 @@
-# Dictionary
+# Iterator: Tuple / List
 
 #### Styio Native
 
 ```
-@(k, v) -> D >> {
+@(x) -> L >> {
     ...
 }
 ```
@@ -11,7 +11,7 @@
 #### Sugar <- Ruby Style
 
 ```
-D >> { |k, v|
+L >> { |x|
     ...
 }
 ```
@@ -19,7 +19,7 @@ D >> { |k, v|
 #### Sugar <- Chaotic-Evil Style
 
 ```
-D(k, v) >> {
+L(x) >> {
     ...
 }
 ```
