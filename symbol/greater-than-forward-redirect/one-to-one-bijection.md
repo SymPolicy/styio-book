@@ -1,2 +1,0 @@
-# One-To-One (Bijection)
-

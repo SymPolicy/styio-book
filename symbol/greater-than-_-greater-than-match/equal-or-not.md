@@ -1,6 +1,0 @@
----
-description: Equal or Not?
----
-
-# ?=
-
