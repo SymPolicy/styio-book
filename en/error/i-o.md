@@ -1,5 +1,39 @@
 # I/O
 
+### Error Handle
+
+#### => Now.&#x20;
+
+```
+x | :) <- @("data.csv")
+  | :( {
+    >_ ("Error: Failed.")
+  }
+```
+
+#### => Later. Keep the error.
+
+```
+x :? <- @("data.csv")
+
+...
+
+
+x ?= {
+    // Value Case
+    :) => {
+        ...
+    }
+    
+    // Error Case
+    :( => {
+        ...
+    }
+    
+    // Note: You don't need to specify the default case.
+}
+```
+
 #### Error Handling
 
 Manually handle cases&#x20;
