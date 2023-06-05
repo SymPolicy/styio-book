@@ -1,0 +1,8 @@
+# enum
+
+```
+@Option := {
+    => Some
+    => None
+}
+```

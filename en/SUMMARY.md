@@ -5,7 +5,16 @@
 * [Function](function.md)
 * [Struct & Trait](struct-and-trait.md)
 * [Operator Overloading](operator-overloading.md)
+* [Binding](binding.md)
 * [None](none.md)
+
+## Type System
+
+* [int](type-system/int.md)
+* [float](type-system/float.md)
+* [bool](type-system/bool.md)
+* [struct](type-system/struct.md)
+* [enum](type-system/enum.md)
 
 ## Symbol
 

@@ -3,7 +3,7 @@
 {% tabs %}
 {% tab title="Usage" %}
 ```
-f(x, y) {
+@f(x, y) := {
     ...
 }
 ```
@@ -16,9 +16,9 @@ f(x, y) {
  * Bring variables into the scope of `f`.
  */
 
-@(x, y) -> f := {
+@f |x, y| := {
     ...
-} 
+}
 ```
 {% endtab %}
 {% endtabs %}
