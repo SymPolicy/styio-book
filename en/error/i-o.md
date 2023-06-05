@@ -23,8 +23,10 @@ If fails, then the program crashes.
 x <- @("data.csv")
 ```
 
-#### Only Success (Guard)
+#### Uncertain value
+
+x can be a value or an error.&#x20;
 
 ```
-x :) <- @("data.csv")
+x :? <- @("data.csv")
 ```
