@@ -31,6 +31,7 @@ x ?= {
     }
     
     // Note: You don't need to specify the default case.
+    // since happy guard :) and sad guard :( are enumerate of guard type.
 }
 ```
 
