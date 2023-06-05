@@ -184,7 +184,7 @@ while `expr`:
 ### + Increment Element
 
 ```
-@i [0..] >> {
+[0..] |i| >> {
     ...
 }
 ```

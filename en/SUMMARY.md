@@ -21,6 +21,7 @@
   * [?=](symbol/greater-than-\_-greater-than-match/equal-or-not.md)
   * [=>](symbol/greater-than-\_-greater-than-match/greater-than-branch.md)
 * [<:](symbol/less-than-inherit.md)
+* [:)](symbol/undefined-1.md)
 
 ## Primitive Design
 
@@ -53,6 +54,10 @@
 * [Iterator: Tuple / List](iterator/iterator-tuple-list.md)
 * [Iterator: Dictionary](iterator/iterator-dictionary.md)
 * [Iterator: Any](iterator/iterator-any.md)
+
+## Error
+
+* [I/O](error/i-o.md)
 
 ## Semi-Ring
 
