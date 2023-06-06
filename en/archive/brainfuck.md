@@ -3,9 +3,13 @@
 ```
 @memory = []
 
-memory ]+ 
+[...] >> {
+    memory ]+ 0
 
-memory >> $(#? + 1) {
     
-} 
+}
+```
+
+```
+@memory: Array[30000]<int> = [0..]
 ```
