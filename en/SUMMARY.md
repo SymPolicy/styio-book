@@ -101,3 +101,4 @@
 * [Smile!](archive/smile.md)
 * [Keywords](archive/keywords.md)
 * [Type](archive/type.md)
+* [BrainFuck](archive/brainfuck.md)
