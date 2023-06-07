@@ -1,15 +1,45 @@
 # BrainFuck
 
 ```
-@memory = []
+@mem: [30000] = [0..]
+
+@ptr = 0
 
 [...] >> {
-    memory ]+ 0
-
+    next <- >_()
     
+    next ?= {
+        ">" => {
+            ptr = ptr + 1
+        }
+        
+        "<" => {
+            ptr = ptr - 1
+        }
+        
+        "+" => {
+            mem[ptr] = mem[ptr] + 1
+        }
+        
+        "-" => {
+            mem[ptr] = mem[ptr] + 1
+        }
+        
+        "[" => {
+            
+        }
+        
+        "]" => {
+            
+        }
+        
+        "," => {
+            mem[ptr] <- >_()
+        }
+        
+        "." => {
+            mem[ptr] -> >_()
+        }
+    }
 }
-```
-
-```
-@memory: Array[30000]<int> = [0..]
 ```
