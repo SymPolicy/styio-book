@@ -58,7 +58,7 @@
 }
 
 // Additional Function Define And Implementation
-Point +: toString() : {
+Point :+ toString() : {
     
 } 
 ```
