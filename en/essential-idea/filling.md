@@ -10,6 +10,10 @@
 
 \``$`\`(Reference) are full-filled pigeon holes, there is a pigeon in each hole.
 
+### Example
+
+Iterate over `R`, for each element, split it and auto fill in the template `#(k, v)`, then execute single branch `=> { ... }`.
+
 ```
 R >> #(k, v) => {
     ...
