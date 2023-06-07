@@ -9,3 +9,9 @@
 \``#`\`(Template) are empty pigeon holes, waiting for pigeons to move in.
 
 \``$`\`(Reference) are full-filled pigeon holes, there is a pigeon in each hole.
+
+```
+R >> #(k, v) => {
+    ...
+}
+```
