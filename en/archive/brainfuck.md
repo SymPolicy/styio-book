@@ -38,21 +38,19 @@
             }
             :( {
                 count = 0
-                [-mem_size..0] >> #(rptr) => {
-                    rptr ?= {
-                        "]" => {
-                            count = count + 1
+                [-mem_size..0] >> #(rptr) ?= {
+                    "]" => {
+                        count = count + 1
                             
-                            ?(count == iloop) 
-                            :) {
-                                ptr = mem[?= rptr] 
+                        ?(count == iloop) 
+                        :) {
+                            ptr = mem[?= rptr] 
                                 
-                                ! >> ~;
-                            }
+                            ! >> ~;
                         }
-                        
-                        _ => ...
                     }
+                        
+                    _ => ...
                 }
             }
         }
@@ -64,21 +62,19 @@
             }
             :( {
                 count = 0
-                [0..mem_size] >> #(lptr) => {
-                    lptr ?= {
-                        "]" => {
-                            count = count + 1
+                [0..mem_size] >> #(lptr) ?= {
+                    "]" => {
+                        count = count + 1
                             
-                            ?(count == iloop) 
-                            :) {
-                                ptr = mem[?= lptr] 
+                        ?(count == iloop) 
+                        :) {
+                            ptr = mem[?= lptr] 
                                 
-                                ! >> ~;
-                            }
+                            ! >> ~;
                         }
-                        
-                        _ => ...
                     }
+                        
+                    _ => ...
                 }
             }
         }
