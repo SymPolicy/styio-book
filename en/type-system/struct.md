@@ -1,12 +1,6 @@
 # struct
 
 ```
-@Point : #(
-    x: float, 
-    y: float
-)
-
-// final
 @Point := #(
     x: float, 
     y: float
