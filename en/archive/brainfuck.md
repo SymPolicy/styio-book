@@ -44,7 +44,7 @@
                             
                         ?(count == iloop) 
                         :) {
-                            ptr = mem[?= rptr] 
+                            ptr = rptr
                                 
                             ! >> ~;
                         }
@@ -68,7 +68,7 @@
                             
                         ?(count == iloop) 
                         :) {
-                            ptr = mem[?= lptr] 
+                            ptr = lptr
                                 
                             ! >> ~;
                         }
