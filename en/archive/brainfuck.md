@@ -38,15 +38,16 @@
             }
             :( {
                 count = 0
-                [-mem_size..0] >> #(rptr) ?= {
+                
+                mem[-] >> #(r) ?= {
                     "]" => {
                         count = count + 1
-                            
+                                
                         ?(count == iloop) 
                         :) {
-                            ptr = rptr
-                                
-                            ! >> ~;
+                            ptr = mem[?= r]
+                                    
+                            ! >> ();
                         }
                     }
                         
@@ -62,15 +63,16 @@
             }
             :( {
                 count = 0
-                [0..mem_size] >> #(lptr) ?= {
+                
+                mem >> #(l) ?= {
                     "]" => {
                         count = count + 1
                             
                         ?(count == iloop) 
                         :) {
-                            ptr = lptr
+                            ptr = mem[?= l]
                                 
-                            ! >> ~;
+                            ! >> ();
                         }
                     }
                         
