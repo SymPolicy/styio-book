@@ -21,19 +21,16 @@ iloop = 1
         count = 0
         
         // match backward
-        [0..|code|][-] >> #(r) => {
-            ?(code[r] == ']') 
+        [|code|..0] >> code[#r] ?= ']' => {
+            count += 1
+            
+            ?(count == iloop) 
             :) {
-                count += 1
-                
-                ?(count == iloop) 
-                :) {
-                    map ]+ (l, r)
+                map ]+ (l, r)
                     
-                    found = $T
+                found = $T
                     
-                    _^_
-                }
+                _^_
             }
         }
         
