@@ -21,16 +21,16 @@ iloop = 1
         count = 0
         
         // match backward
-        [|code|..0] >> code[#r] ?= ']' => {
+        code[<<] >> #r ?= ']' :) {
             count += 1
             
             ?(count == iloop) 
             :) {
-                map ]+ (l, r)
-                    
+                map ]+ (l, code[?= r])
+
                 found = $T
                     
-                _^_
+                ^^^^^^^^^^^^^^^^^^^^^^
             }
         }
         
@@ -39,7 +39,7 @@ iloop = 1
             iloop += 1
         } 
         :( {
-            !! ($"Error: `]` not found for `[` at position {l}!")
+            !!! ($"Error: For the `[` at position {l}, the corresponding `]` is not found.")
         }
     }
 }

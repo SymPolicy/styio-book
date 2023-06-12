@@ -10,10 +10,11 @@
 
 {% tabs %}
 {% tab title="Java" %}
-<pre class="language-java"><code class="lang-java">while (true) {
-<strong>    // code block
-</strong>}
-</code></pre>
+```java
+while (true) {
+    // code block
+}
+```
 {% endtab %}
 
 {% tab title="Python" %}
@@ -27,20 +28,14 @@ while True:
 ### + Break
 
 ```
-[...] {
-    ...
-    
-    ! -> ~
-}
+^^^
 ```
 
 ### + Break (With Condition)
 
 ```
-// macro start: check `expr` and then reset this code block
-
-? (`expr`) -> {
-    ! -> ~
+? (`expr`) :) {
+    ^^^
 }
 ```
 
@@ -49,7 +44,7 @@ while True:
 <pre><code><strong>[...] >> {
 </strong>    ...
     
-    !?(`expr`) -> ~
+    ?(`expr`) => ^^^
 }
 </code></pre>
 {% endtab %}
@@ -59,8 +54,8 @@ while True:
 [...] >> {
     ...
     
-    ? (`expr`) -> {
-        ! -> ~
+    ? (`expr`) :) {
+        ^^^
     }
 }
 ```
@@ -93,30 +88,16 @@ while True:
 ### + Continue
 
 ```
-// macro start: do nothing
-
-! >> {}
+:) >>
 ```
 
 {% tabs %}
-{% tab title="Usage" %}
-```
-[...] >> {
-    ...
-    
-    !?(`expr`) >>
-}
-```
-{% endtab %}
-
 {% tab title="Definition" %}
 ```
 [...] >> {
     ...
     
-    ?(`expr`) -> {
-        ! >> {}
-    };
+    ?(`expr`) :) >>
 }
 ```
 {% endtab %}
@@ -184,7 +165,7 @@ while `expr`:
 ### + Increment Element
 
 ```
-[0..] |i| >> {
+[0..i] >> {
     ...
 }
 ```
