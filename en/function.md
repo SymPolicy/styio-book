@@ -1,22 +1,9 @@
 # Function
 
 {% tabs %}
-{% tab title="Usage" %}
-```
-@f(x, y) := {
-    ...
-}
-```
-{% endtab %}
-
 {% tab title="Definition" %}
 ```
-/*
- * Define a function `f` with a block.
- * Bring variables into the scope of `f`.
- */
-
-@f |x, y| := {
+#f(x, y) := {
     ...
 }
 ```
