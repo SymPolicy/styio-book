@@ -11,39 +11,36 @@ map = []
 iloop = 1
 
 // match [ ] pairs
-[0..|code|] >> #(l) => {
-    ?(code[l] == '[')
-    :) {
-        // found or not
-        found = $F
+code >> #l ?= '[' :) {
+    // found or not
+    found = $F
         
-        // count backward
-        count = 0
+    // count backward
+    count = 0
         
-        // reversed code text
-        rev_code = code[<<]
+    // reversed code text
+    rev_code = code[<<]
         
-        // match backward
-        rev_code >> #r ?= ']' :) {
-            count += 1
+    // match backward
+    rev_code >> #r ?= ']' :) {
+        count += 1
             
-            ?(count == iloop) 
-            :) {
-                map ]+ (l, code[?= r])
-
-                found = $T
-                    
-                ^^^^^^^^^^^^^^^^^^^^^^
-            }
-        }
-        
-        ?(found)
+        ?(count == iloop) 
         :) {
-            iloop += 1
-        } 
-        :( {
-            !!! ($"Error: For the `[` at position {l}, the corresponding `]` is not found.")
+            map ]+ (code[?= l], code[?= r])
+
+            found = $T
+                    
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         }
+    }
+        
+    ?(found)
+    :) {
+        iloop += 1
+    } 
+    :( {
+        !!! ($"Error: For the `[` at position {l}, the corresponding `]` is not found.")
     }
 }
 
