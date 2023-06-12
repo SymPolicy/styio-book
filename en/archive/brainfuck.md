@@ -20,8 +20,11 @@ iloop = 1
         // count backward
         count = 0
         
+        // reversed code text
+        rev_code << code
+        
         // match backward
-        code[<<] >> #r ?= ']' :) {
+        rev_code >> #r ?= ']' :) {
             count += 1
             
             ?(count == iloop) 
