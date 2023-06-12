@@ -21,7 +21,7 @@ iloop = 1
         count = 0
         
         // reversed code text
-        rev_code <- code[<<]
+        rev_code = code[<<]
         
         // match backward
         rev_code >> #r ?= ']' :) {
