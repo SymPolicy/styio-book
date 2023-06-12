@@ -56,79 +56,75 @@ ptr = 0
 // character location (index) in code text
 loc = 0
 
-[...] >> {
-    char = code[loc]
-
-    char ?= {
-        ">" => {
-            ptr = ptr + 1
+[...] >> #(code[loc] -> char) ?= {
+    ">" => {
+        ptr = ptr + 1
             
-            loc += 1
-        }
+        loc += 1
+    }
             
-        "<" => {
-            ptr = ptr - 1
+    "<" => {
+        ptr = ptr - 1
             
-            loc += 1
-        }
+        loc += 1
+    }
             
-        "+" => {
-            mem[ptr] = mem[ptr] + 1
+    "+" => {
+        mem[ptr] = mem[ptr] + 1
             
-            loc += 1
-        }
+        loc += 1
+    }
             
-        "-" => {
-            mem[ptr] = mem[ptr] - 1
+    "-" => {
+        mem[ptr] = mem[ptr] - 1
             
-            loc += 1
-        }
+        loc += 1
+    }
         
-        "," => {
-            mem[ptr] <- >_()
+    "," => {
+        mem[ptr] <- >_()
             
-            loc += 1
-        }
+        loc += 1
+    }
             
-        "." => {
-            mem[ptr] -> >_()
+    "." => {
+        mem[ptr] -> >_()
             
-            loc += 1
-        }
+        loc += 1
+    }
             
-        "[" => {
-            ? (mem[ptr] == 0) 
-            :) {
-                map >> #(i, j) => {
-                    ?(i == loc)
-                    :) {
-                        loc = j
-                    }
-                }
-            }
-            :( {
-                ptr = ptr + 1
-            }
-        }
-            
-        "]" => {
-            ? (mem[ptr] == 0) 
-            :) {
-                ptr = ptr + 1
-            }
-            :( {
-                map >> #(i, j) => {
-                    ?(j == loc)
-                    :) {
-                        loc = i
-                    }
+    "[" => {
+        ? (mem[ptr] == 0) 
+        :) {
+            map >> #(i, j) => {
+                ?(i == loc)
+                :) {
+                    loc = j
                 }
             }
         }
-            
-        _ => {
-            loc += 1
+        :( {
+            ptr = ptr + 1
         }
-    } 
+    }
+            
+    "]" => {
+        ? (mem[ptr] == 0) 
+        :) {
+            ptr = ptr + 1
+        }
+        :( {
+            map >> #(i, j) => {
+                ?(j == loc)
+                :) {
+                    loc = i
+                }
+            }
+        }
+    }
+            
+    _ => {
+        loc += 1
+    }
 } 
 ```
