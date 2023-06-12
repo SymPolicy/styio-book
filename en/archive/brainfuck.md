@@ -53,7 +53,7 @@ ptr = 0
 // character location (index) in code text
 loc = 0
 
-[...] >> #(code[loc] -> char) ?= {
+[...] >> code[loc] ?= {
     ">" => {
         ptr = ptr + 1
             
