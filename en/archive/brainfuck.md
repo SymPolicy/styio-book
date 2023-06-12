@@ -1,95 +1,134 @@
 # BrainFuck
 
 ```
-@mem_size = 30000
+// read code file
+code <- @("code.txt")
 
-@mem: Array[mem_size] = [0..]
+// create map for [ ]
+map = []
 
-@ptr = 0
+// index of loop [ ]
+iloop = 1
 
-@iloop = 0
-
-[...] >> {
-    next <- >_()
-    
-    next ?= {
-        ">" => {
-            ptr = ptr + 1
-        }
+// match [ ] pairs
+[0..|code|] >> #(l) => {
+    ?(code[l] == '[')
+    :) {
+        // found or not
+        found = $F
         
-        "<" => {
-            ptr = ptr - 1
-        }
+        // count backward
+        count = 0
         
-        "+" => {
-            mem[ptr] = mem[ptr] + 1
-        }
-        
-        "-" => {
-            mem[ptr] = mem[ptr] + 1
-        }
-        
-        "[" => {
-            iloop = iloop + 1
-    
-            ? (mem[ptr] == 0) 
+        // match backward
+        [0..|code|][-] >> #(r) => {
+            ?(code[r] == ']') 
             :) {
-                ptr = ptr + 1
-            }
-            :( {
-                count = 0
+                count += 1
                 
-                mem[-] >> #(r) ?= {
-                    "]" => {
-                        count = count + 1
-                                
-                        ?(count == iloop) 
-                        :) {
-                            ptr = mem[?= r]
-                                    
-                            ! >> ^
-                        }
-                    }
-                        
-                    _ => ...
+                ?(count == iloop) 
+                :) {
+                    map ]+ (l, r)
+                    
+                    found = $T
+                    
+                    _^_
                 }
             }
         }
         
+        ?(found)
+        :) {
+            iloop += 1
+        } 
+        :( {
+            !! ($"Error: `]` not found for `[` at position {l}!")
+        }
+    }
+}
+
+// create memory
+mem: i32[30000] = [0..]
+
+// pointer location (index) in memory
+ptr = 0
+
+// character location (index) in code text
+loc = 0
+
+[...] >> {
+    char = code[loc]
+
+    char ?= {
+        ">" => {
+            ptr = ptr + 1
+            
+            loc += 1
+        }
+            
+        "<" => {
+            ptr = ptr - 1
+            
+            loc += 1
+        }
+            
+        "+" => {
+            mem[ptr] = mem[ptr] + 1
+            
+            loc += 1
+        }
+            
+        "-" => {
+            mem[ptr] = mem[ptr] - 1
+            
+            loc += 1
+        }
+        
+        "," => {
+            mem[ptr] <- >_()
+            
+            loc += 1
+        }
+            
+        "." => {
+            mem[ptr] -> >_()
+            
+            loc += 1
+        }
+            
+        "[" => {
+            ? (mem[ptr] == 0) 
+            :) {
+                map >> #(i, j) => {
+                    ?(i == loc)
+                    :) {
+                        loc = j
+                    }
+                }
+            }
+            :( {
+                ptr = ptr + 1
+            }
+        }
+            
         "]" => {
             ? (mem[ptr] == 0) 
             :) {
                 ptr = ptr + 1
             }
             :( {
-                count = 0
-                
-                mem >> #(l) ?= {
-                    "]" => {
-                        count = count + 1
-                            
-                        ?(count == iloop) 
-                        :) {
-                            ptr = mem[?= l]
-                                
-                            ! >> ^
-                        }
+                map >> #(i, j) => {
+                    ?(j == loc)
+                    :) {
+                        loc = i
                     }
-                        
-                    _ => ...
                 }
             }
         }
-        
-        "," => {
-            mem[ptr] <- >_()
+            
+        _ => {
+            loc += 1
         }
-        
-        "." => {
-            mem[ptr] -> >_()
-        }
-        
-        _ => ...
-    }
+    } 
 } 
 ```
