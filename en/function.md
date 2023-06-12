@@ -28,11 +28,11 @@
 {% tabs %}
 {% tab title="Usage" %}
 ```
-@(x, y) { 
-    x + y 
+#(x, y) => { 
+    ^^^ <- x + y
 }
 
-@(x, y) | x + y |
+#(x, y) => | x + y |
 ```
 {% endtab %}
 
