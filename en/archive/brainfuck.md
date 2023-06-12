@@ -8,39 +8,38 @@ code <- @("code.txt")
 map = []
 
 // index of loop [ ]
-iloop = 1
+iloop = 0
+
+// last index of code text
+ilast = |code| - 1
 
 // match [ ] pairs
-code >> #l ?= '[' :) {
-    // found or not
-    found = $F
+[0..ilast] >> #l ?= '[' :) {
+    // found a loop
+    iloop += 1
+    
+    // successfully matched the matched ']' or not
+    success = $F
         
     // count backward
     count = 0
         
-    // reversed code text
-    rev_code = code[<<]
-        
     // match backward
-    rev_code >> #r ?= ']' :) {
+    [ilast..0] >> #r ?= ']' :) {
         count += 1
             
         ?(count == iloop) 
         :) {
-            map ]+ (code[?= l], code[?= r])
+            map ]+ (l, r)
 
-            found = $T
+            success = $T
                     
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         }
     }
-        
-    ?(found)
-    :) {
-        iloop += 1
-    } 
-    :( {
-        !!! ($"Error: For the `[` at position {l}, the corresponding `]` is not found.")
+    
+    ?(success) :( {
+        !!! <- $"For `[` at position {l}, the corresponding `]` was not found."
     }
 }
 
