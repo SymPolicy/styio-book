@@ -36,3 +36,9 @@ R(k, v)... | `expr` |
 // means "decompose R, iterate each element as <k, v> pair"
 sum(R, <k, v>) | `expr` |
 ```
+
+```
+(x x): "[ERROR]: ..."
+(! !): "[WARN ]: ..."
+(> <): "[INFO ]: ..."
+```
