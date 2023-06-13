@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Styio](README.md)
-* [基本符号](ji-ben-fu-hao.md)
+* [基本符号](ji-ben-fu-hao/README.md)
+  * [符号解析表](ji-ben-fu-hao/fu-hao-jie-xi-biao.md)
 
 ## Basic
 
