@@ -58,6 +58,7 @@
 ## Collection
 
 * [Tuple](collection/tuple.md)
+* [Array](collection/array.md)
 * [List](collection/list.md)
 * [Record](collection/record.md)
 * [Dictionary](collection/dictionary.md)
