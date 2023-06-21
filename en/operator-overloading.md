@@ -22,12 +22,9 @@
 | <-       | Larr  |
 
 ```
-@(x, y) -> Point : {
-    ...
-}
+Point := (x, y)
 
-// Nested Define and Implementation
-@Point(x, y): {
+Point(x, y) +: {
     x : {
         $x 
     }
@@ -37,28 +34,28 @@
     }
 
     // Negative
-    - $Point : {
+    `- $?` : {
     
     }
     
     // Addition
-    $Point + @(y) : {
+    `$? + {other}` : {
     
     }
     
     // Reversed Addition
-    @(y) + $Point : {
+    `{other} + $?` : {
     
     }
     
     // Incremental Addition
-    $Point += @(y) : {
-    
+    `$? += {other}` : {
+        
     }
 }
 
 // Additional Function Define And Implementation
-Point :+ toString() : {
+Point +: toString() : {
     
 } 
 ```

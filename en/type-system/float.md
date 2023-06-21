@@ -1,5 +1,5 @@
-# float
+# Float
 
 ```
-x : float = 0.0
+x : f64 = 0.0
 ```

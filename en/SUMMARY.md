@@ -3,7 +3,6 @@
 * [Styio](README.md)
 * [Variable](variable.md)
 * [Function](function.md)
-* [Struct & Trait](struct-and-trait.md)
 * [Operator Overloading](operator-overloading.md)
 * [None](none.md)
 
@@ -14,11 +13,10 @@
 
 ## Type System
 
-* [int](type-system/int.md)
-* [float](type-system/float.md)
-* [bool](type-system/bool.md)
-* [struct](type-system/struct.md)
-* [enum](type-system/enum.md)
+* [Int](type-system/int.md)
+* [Float](type-system/float.md)
+* [Bool](type-system/bool.md)
+* [Enum](type-system/enum.md)
 
 ## Symbol
 
@@ -57,7 +55,7 @@
 
 ## Collection
 
-* [Tuple](collection/tuple.md)
+* [Struct](collection/struct.md)
 * [Array](collection/array.md)
 * [List](collection/list.md)
 * [Record](collection/record.md)
