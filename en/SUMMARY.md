@@ -41,6 +41,7 @@
 * [BNF](primitive-design/bnf-form.md)
 * [LL(n)](primitive-design/ll-n.md)
 * [Example](primitive-design/example.md)
+* [Binary Operation](primitive-design/binary-operation.md)
 
 ## Implementation
 

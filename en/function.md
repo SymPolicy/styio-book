@@ -3,7 +3,7 @@
 {% tabs %}
 {% tab title="Definition" %}
 ```
-#f(x, y) := {
+f(x, y) := {
     ...
 }
 ```
@@ -16,7 +16,7 @@
 {% tab title="Usage" %}
 ```
 #(x, y) => { 
-    ^^^ <- x + y
+    ==(x + y)==
 }
 
 #(x, y) => | x + y |

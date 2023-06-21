@@ -1,7 +1,7 @@
 # struct
 
 ```
-#Point := (
+Point := (
     x: float, 
     y: float
 )
