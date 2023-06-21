@@ -8,7 +8,7 @@
 x | :) <- @("data.csv")
   | :( {
     >_ ("Error: Failed.")
-  }
+}
 ```
 
 #### => Later. Keep the error.

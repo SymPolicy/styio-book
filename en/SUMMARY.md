@@ -32,7 +32,9 @@
   * [?=](symbol/greater-than-\_-greater-than-match/equal-or-not.md)
   * [=>](symbol/greater-than-\_-greater-than-match/greater-than-branch.md)
 * [<:](symbol/less-than-inherit.md)
-* [:)](symbol/undefined-1.md)
+* [:](symbol/undefined-1.md)
+* [:=](symbol/undefined-2.md)
+* [:)](symbol/undefined-3.md)
 
 ## Primitive Design
 
@@ -45,6 +47,7 @@
 
 * [Minimal](implementation/minimal.md)
 * [Cases](implementation/cases.md)
+* [Parse (Type)](implementation/parse-type.md)
 
 ## Control Flow
 

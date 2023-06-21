@@ -25,11 +25,11 @@
 Point := (x, y)
 
 Point(x, y) +: {
-    x : {
+    x := {
         $x 
     }
     
-    y : {
+    y := {
         $y
     }
 
@@ -55,7 +55,7 @@ Point(x, y) +: {
 }
 
 // Additional Function Define And Implementation
-Point +: toString() : {
+Point +: toString() := {
     
 } 
 ```
