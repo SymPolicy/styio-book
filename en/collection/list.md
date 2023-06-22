@@ -58,7 +58,7 @@ a = v <- (k, v) <~ d
 
 // Comprehensive
 // Adapt and Export
-a = [d ~> (k, v) -> v]
+a = [d ~ (k, v) -> v]
 
 a = list(d.values())
 
