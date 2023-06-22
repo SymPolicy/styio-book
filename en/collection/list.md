@@ -37,6 +37,16 @@ memory [+ 0
 memory [-
 
 // Comprehensive Formation
+/*
+ How to read this?
+ 1. See [], so `a` is a List.
+ 2. See <<, so this is a filling operation
+ 3. See (k, v), so we are iterating over a Dict.
+ 4. See ==(v)==, we only need `v`.
+ 
+ It is easy to read, and more expressive.
+ */
+
 a = [] << {
   d >> (k, v) => {
     ==(v)==
