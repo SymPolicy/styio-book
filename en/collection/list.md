@@ -53,8 +53,16 @@ a = [] << {
   }
 }
 
+// list(d.keys())
+k <- [d ~ (k, v)]
+[d ~ (k, v) -> k]
 
-a = v <- d ~ (k, v)
+// list(d.values())
+v <- [d ~ (k, v)]
+[d ~ (k, v) -> v]
+
+// list(d.items())
+[d ~ (k, v)]
 
 // Comprehensive
 // Adapt and Export
