@@ -54,14 +54,16 @@ a = [] << {
 }
 
 
-a = v <= (k, v) <~ d
+a = v <- (k, v) <~ d
 
 // Comprehensive
-a = [d ~> (k, v) => v]
+// Adapt and Export
+a = [d ~> (k, v) -> v]
 
 a = list(d.values())
 
 // Iteration
+// Iterate and Return
 a = [d >> (k, v) => v]
 
 a = [v for k, v in d]
