@@ -35,4 +35,11 @@ memory [+ 0
 
 // drop the first element 
 memory [-
+
+// Comprehensive Formation
+alist = [] << {
+    blist >> (i) => {
+        ==(i + 1)==
+    }
+}
 ```
