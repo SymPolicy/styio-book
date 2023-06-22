@@ -21,8 +21,7 @@ x = << [0, 1, 2]
 // [2, 1, 0]
 ```
 
-```
-@memory = []
+<pre><code>@memory = []
 
 // push 
 memory ]+ 0
@@ -40,16 +39,24 @@ memory [-
 /*
  How to read this?
  1. See [], so `a` is a List.
- 2. See <<, so this is a filling operation
+ 2. See &#x3C;&#x3C;, so this is a filling operation
  3. See (k, v), so we are iterating over a Dict.
  4. See ==(v)==, we only need `v`.
  
  It is easy to read, and more expressive.
  */
 
-a = [] << {
+a = [] &#x3C;&#x3C; {
   d >> (k, v) => {
     ==(v)==
   }
 }
-```
+
+a = [d ~> (k, v) => v]
+
+<strong>a = list(d.values())
+</strong>
+a = [d >> (k, v) => v]
+
+a = [v for k, v in d]
+</code></pre>
