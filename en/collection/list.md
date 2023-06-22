@@ -53,6 +53,9 @@ a = [] << {
   }
 }
 
+
+a = v <= (k, v) <~ d
+
 // Comprehensive
 a = [d ~> (k, v) => v]
 
