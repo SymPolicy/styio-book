@@ -27,7 +27,7 @@
 <ID> = `[` />/ List Assignment
 <ID> = `"` />/ String Assignment
 <ID> = `<` />/ Record Assignment
-<ID> = `{` />/ Dictionary Assignment
+<ID> = `{` />/ Dictionary Assignment 
 ```
 
 

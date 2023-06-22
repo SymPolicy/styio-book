@@ -1,13 +1,7 @@
-# bool
+# Bool
 
 ```
-x : bool = #T
+x : bool = $T
 
-x : bool = #F
-```
-
-```
-x : bool = true
-
-x : bool = false
+x : bool = $F
 ```
