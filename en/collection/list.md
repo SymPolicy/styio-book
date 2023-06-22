@@ -54,7 +54,7 @@ a = [] << {
 }
 
 
-a = v <- (k, v) <~ d
+a = v <- (k, v) ~ d
 
 // Comprehensive
 // Adapt and Export
