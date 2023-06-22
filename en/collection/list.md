@@ -37,9 +37,9 @@ memory [+ 0
 memory [-
 
 // Comprehensive Formation
-alist = [] << {
-    blist >> (i) => {
-        ==(i + 1)==
-    }
+a = [] << {
+  d >> (k, v) => {
+    ==(v)==
+  }
 }
 ```
