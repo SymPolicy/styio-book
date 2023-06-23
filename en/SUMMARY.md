@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Styio](README.md)
+* [Hello, World](hello-world.md)
 * [Variable](variable.md)
 * [Function](function.md)
 * [Operator Overloading](operator-overloading.md)
