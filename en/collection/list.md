@@ -75,4 +75,8 @@ a = list(d.values())
 a = [d >> (k, v) => v]
 
 a = [v for k, v in d]
+
+// Insert "B" to Index 1
+// Same: Insert "B" to the front of current index 1.
+["A", "C"][^? 1 <- "B"]
 ```
