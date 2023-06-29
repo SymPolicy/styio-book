@@ -1,5 +1,7 @@
 # BrainFuck
 
+
+
 ```
 // read code file
 code <- @("code.txt")
@@ -14,7 +16,7 @@ iloop = 0
 ilast = |code| - 1
 
 // match [ ] pairs
-[0..ilast] >> #l ?= '[' :) {
+[0..ilast] >> #l ?= '[' => {
     // found a loop
     iloop += 1
     
@@ -25,7 +27,7 @@ ilast = |code| - 1
     count = 0
         
     // match backward
-    [ilast..0] >> #r ?= ']' :) {
+    [ilast..0] >> #r ?= ']' => {
         count += 1
             
         ?(count == iloop) 
