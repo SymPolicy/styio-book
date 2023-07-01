@@ -9,6 +9,7 @@
 
 ## Essential Idea
 
+* [Syntax Overview](essential-idea/syntax-overview.md)
 * [Binding](essential-idea/binding.md)
 * [Filling](essential-idea/filling.md)
 
