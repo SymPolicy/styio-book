@@ -1,12 +1,12 @@
 # Syntax Overview
 
-### Hello, World!
+## Hello, World!
 
 ```
 >_("Hello, Styio!")
 ```
 
-### Project
+## Project
 
 #### Import Module
 
@@ -18,7 +18,7 @@
 }
 ```
 
-### Resource
+## Resource
 
 #### Resource Declaration (Global) (Can Only Be Assigned Once)
 
@@ -38,7 +38,7 @@
 @(x <- "data.csv")
 ```
 
-### Variable
+## Variable
 
 #### Variable Declaration (Global) (Mutable) (Flexible)
 
@@ -64,7 +64,7 @@ x = 0
 x := 0
 ```
 
-### Function
+## Function
 
 #### Function Declaration (Accept Overload) (Flexible) (Danger!)
 
@@ -118,9 +118,9 @@ x := 0
 }
 ```
 
-### Enumeration
+## Enumeration
 
-#### Enum Definition (Final)
+#### Definition (Final)
 
 ```
 #: Type {
@@ -129,7 +129,7 @@ x := 0
 }
 ```
 
-### Struct
+## Struct
 
 #### Struct Definition (Accept Overload) (Flexible) (Danger!)
 
@@ -168,7 +168,7 @@ x := 0
 }
 ```
 
-### Basic Type
+## Basic Type
 
 #### Boolean
 
@@ -198,7 +198,7 @@ z = '\n'
 
 ## Collection
 
-#### String
+### String
 
 ```
 "Hello, Styio!"
@@ -246,13 +246,13 @@ Why do you need this?
 '''
 ```
 
-#### Tuple
+### Tuple
 
 ```
 (0, 1, 2)
 ```
 
-#### Array
+### Array
 
 ```
 x: i32[100] = [0..]
@@ -667,6 +667,46 @@ c = 0
 [0, 1, 2] >> (x) ? (x % 2 == 1) :) {
   >_("x is odd number")
 }
+```
+
+## IO
+
+#### Print
+
+```
+>_("Styio!")
+```
+
+#### Read File
+
+```
+x <- @("data.csv")
+```
+
+#### Write File
+
+```
+x -> @("data.csv")
+```
+
+#### Download From Link
+
+```
+x <- @("https://some.link/path/to/file.json")
+```
+
+#### Listen Web Socket (Block Thread)
+
+```
+@("localhost:35752") >> {
+    
+}
+```
+
+## Exception handling
+
+```
+!!! <- "Error: There is something wrong."
 ```
 
 ### Operator Overload
