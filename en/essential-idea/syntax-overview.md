@@ -703,6 +703,26 @@ x <- @("https://some.link/path/to/file.json")
 }
 ```
 
+## Concurrent
+
+```
+{
+& =>
+& =>
+& =>
+}
+```
+
+##
+
+```
+{
+| =>
+| =>
+| =>
+}
+```
+
 ## Exception handling
 
 ```

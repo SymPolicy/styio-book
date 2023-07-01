@@ -2,10 +2,11 @@
 
 ## Program
 
-<pre><code>/*
+```
+/*
  * A program can be 
- * either &#x3C;= { Dependency -> Space }
- * or &#x3C;= Block
+ * either <= { Dependency -> Space }
+ * or <= Block
  */
  
  Program :=
@@ -15,29 +16,31 @@
         Space
     }
     
-<strong>    | Block
-</strong></code></pre>
+    | Block
+```
 
 ## Dependency
 
-<pre><code>/*
+```
+/*
  * Dependencies can be defined as a list of dependency items,
-<strong> *     with the delimiter ","
-</strong><strong> *   
-</strong> * @("abc", "xyz", ...)
+ *     with the delimiter ","
+ *   
+ * @("abc", "xyz", ...)
  */
  
  Dependency := "@" "(" DependencyItem ["," DependencyItem]* ")"
-</code></pre>
+```
 
 ### Dependency Item
 
-<pre><code>/*
-<strong> * Dependency item must be [double quoted] [unix style path] string.
-</strong> */
+```
+/*
+ * Dependency item must be [double quoted] [unix style path] string.
+ */
  
  DependencyItem := "path/to/package"
-</code></pre>
+```
 
 ## Space
 
