@@ -69,20 +69,20 @@ x := 0
 #### Function Declaration (Accept Overload) (Danger!)
 
 ```
-#: f(x) {
-
+#= f(x) {
+  == x ==
 }
 
-#: f(x, y) {
-
+#= f(x, y) {
+  == y ==
 }
 ```
 
 #### Function Definition (Reject Overload)
 
 ```
-#= f(x, y) {
-
+#: f(x, y) {
+  == x + y ==
 }
 ```
 
@@ -91,16 +91,22 @@ x := 0
 #### Struct Definition (Accept Overload) (Danger!)
 
 ```
-#: Point (
+#= Point (
   x: f64,
   y: f64,
+)
+
+#= Point (
+  x: f64,
+  y: f64,
+  z: f64;
 )
 ```
 
 #### Struct Declaration (Reject Overload)
 
 ```
-#= Point (
+#: Point (
   x: f64, 
   y: f64,
 )
@@ -109,11 +115,13 @@ x := 0
 #### Struct: Extra Methods
 
 ```
-#= Point (
+#: Point (
   x: f64, 
   y: f64,
 ) +: {
-  
+  eval() : {
+    == (x, y) ==
+  }
 }
 ```
 
@@ -142,10 +150,10 @@ y : f64 = 0.0
 #### Char
 
 ```
-z : '\n'
+z = '\n'
 ```
 
-### Collection
+## Collection
 
 #### String
 
@@ -207,10 +215,127 @@ Why do you need this?
 x: i32[100] = [0..]
 ```
 
-#### List
+### List
 
 ```
-[0, 1, 2]
+[1, 2, 3, 4, 5, 6]
+```
+
+#### Get size (length) of the list
+
+<pre><code>list = [1, 2, 3, 4, 5, 6]
+
+|list|
+
+<strong>&#x3C;/> 6
+</strong></code></pre>
+
+#### Push / Append / Add an element to the tail
+
+<pre><code>list = [1, 2, 3, 4, 5, 6]
+
+list ]+ 7
+
+<strong>&#x3C;/> [1, 2, 3, 4, 5, 6, 7]
+</strong></code></pre>
+
+#### Pop / Delete the last element
+
+<pre><code>list = [1, 2, 3, 4, 5, 6]
+
+list ]-
+
+<strong>&#x3C;/> [1, 2, 3, 4, 5]
+</strong></code></pre>
+
+#### Reversed
+
+<pre><code>list[&#x3C;]
+
+<strong>&#x3C;/> [6, 5, 4, 3, 2, 1]
+</strong></code></pre>
+
+#### Get an element by index
+
+<pre><code>list = ['a', 'b', 'c']
+
+list[0]
+
+<strong>&#x3C;/> a
+</strong></code></pre>
+
+#### Get index of an element
+
+<pre><code>list = ['a', 'b', 'c']
+
+list[?= 'b']
+
+<strong>&#x3C;/> 1
+</strong></code></pre>
+
+#### Insert an element by index
+
+<pre><code>list = ['a', 'b', 'd']
+
+list[+: 2 &#x3C;- 'c']
+
+<strong>&#x3C;/> ['a', 'b', 'c', 'd']
+</strong></code></pre>
+
+#### Insert an element to the head
+
+<pre><code>list = ['b', 'c', 'd']
+
+list[+: 0 &#x3C;- 'a']
+
+<strong>&#x3C;/> ['a', 'b', 'c', 'd']
+</strong></code></pre>
+
+#### Remove an element by index
+
+<pre><code>list = ['a', 'o', 'b', 'c']
+
+list[-: 1]
+
+<strong>&#x3C;/> ['a', 'b', 'c']
+</strong></code></pre>
+
+#### Remove an element by value
+
+<pre><code>list = [1, 2, 3]
+
+list[-: ?= 2]
+
+<strong>&#x3C;/> [1, 3]
+</strong></code></pre>
+
+#### Remove elements by many values
+
+<pre><code>list = [1, 2, 3]
+
+list[-: ?^ (2, 3)]
+
+<strong>&#x3C;/> [1]
+</strong></code></pre>
+
+#### Add elements by lambda function (Danger!)
+
+```
+list = [(1, 3), (2, 4)]
+
+list >> (x, y) +: {
+    // This is a lambda function.
+}
+```
+
+#### Remove elements by lambda function (Danger!)
+
+```
+list = [(1, 3), (2, 4)]
+
+list >> (x, y) -: {
+    // This is a lambda function.    
+}
 ```
 
 #### Record
@@ -272,8 +397,19 @@ val ?= {
 }
 ```
 
-#### Infinite Loop (With Intermediate Connection Between Scopes <- ICBSLayer)
+#### Infinite Loop (With Auto Cast + Match Cases)
 
+{% code title="Match Cases (Only One)" %}
+```
+x = 1
+
+[...] >> x ?= 1 => {
+  >_("x is 1")
+}
+```
+{% endcode %}
+
+{% code title="Match Cases (Many)" %}
 ```
 x = 0
 c = 0
@@ -284,7 +420,7 @@ c = 0
     
     ?(c >= 10) 
     :) {
-      ^^^^^^^^^^
+      ^^^^^^^^
     }
   }
   
@@ -298,6 +434,7 @@ c = 0
   }
 }
 ```
+{% endcode %}
 
 #### Range Iterator
 
@@ -307,7 +444,7 @@ c = 0
 }
 ```
 
-#### Range Iterator (With Intermediate Connection Between Scopes <- ICBSLayer)
+#### Range Iterator (With Auto Cast)
 
 ```
 [0..10] >> x => {
@@ -315,33 +452,93 @@ c = 0
 }
 ```
 
+#### Range Iterator (With Auto Cast + Match Cases)
+
+{% code title="Match Cases (Only One)" %}
 ```
-[0..10] >> x ?= 5 => {
+[0..10] >> (x) ?= 5 => {
   >_("x is 5")
 }
 ```
+{% endcode %}
+
+{% code title="Match Cases (Branches)" %}
+```
+[0..10] >> (x) ?= {
+  0 => { >_("x is 0") }
+  1 => { >_("x is 1") }
+  _ => { >_("Default") }
+}
+```
+{% endcode %}
+
+#### Range Iterator (With Auto Cast + Check Is In)
 
 ```
-[0..10] >> x ?^ (6, 7) => {
-  >_("x is either 6 or 7")
+[0..10] >> (x) ?^ (2, 3, 5, 7) => {
+  >_("x is prime number")
 }
 ```
 
+#### Range Iterator (With Auto Cast + Check Condition)
+
 ```
-[0..10] >> x ?(x % 2 == 0) :) {
-  >_("x is even")
+[0..10] >> (x) ? (x % 2 == 0) :) {
+  >_("x is even number")
 }
 ```
 
+#### List Iterator
 
+```
+[0, 1, 2] >> {
+    
+}
+```
 
+#### List Iterator (With Auto Cast)
 
+```
+[0, 1, 2] >> x => {
+    >_("x")
+}
+```
 
+#### List Iterator (With Auto Cast + Match Cases)
 
+{% code title="Match Cases (Only One)" %}
+```
+[0, 1, 2] >> (x) ?= 0 => {
+  >_("x is 0")
+}
+```
+{% endcode %}
 
+{% code title="Match Cases (Branches)" %}
+```
+[0, 1, 2, 3, 4] >> x ?= {
+  0 => { >_("x is 0") }
+  1 => { >_("x is 1") }
+  _ => { >_("Default") }
+}
+```
+{% endcode %}
 
+#### List Iterator (With Auto Cast + Check Is In)
 
+```
+[0, 1, 2, 3, 4, 5] >> (x) ?^ (2, 3, 5) => {
+  >_("x is prime number")
+}
+```
 
+#### List Iterator (With Auto Cast + Check Condition)
+
+```
+[0, 1, 2] >> (x) ? (x % 2 == 1) :) {
+  >_("x is odd number")
+}
+```
 
 
 
