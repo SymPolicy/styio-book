@@ -26,13 +26,13 @@
 @(x, y)
 ```
 
-#### Resource Assignment (Immutable)
+#### Resource Assignment (Immutable) (Final)
 
 ```
 @(x) <- "data.csv"
 ```
 
-#### Resource Definition (Immutable)
+#### Resource Definition (Immutable) (Final)
 
 ```
 @(x <- "data.csv")
@@ -40,25 +40,25 @@
 
 ### Variable
 
-#### Variable Declaration (Global) (Mutable)
+#### Variable Declaration (Global) (Mutable) (Flexible)
 
 ```
 x: i32
 ```
 
-#### Variable Definition (Global) (Mutable)
+#### Variable Definition (Global) (Mutable) (Flexible)
 
 ```
 x: f64 = 0.3
 ```
 
-#### Variable Assignment (Global) (Mutable)
+#### Variable Assignment (Global) (Mutable) (Flexible)
 
 ```
 x = 0
 ```
 
-#### Variable Assignment (Global) (Immutable)
+#### Variable Assignment (Global) (Immutable) (Final)
 
 ```
 x := 0
@@ -66,7 +66,7 @@ x := 0
 
 ### Function
 
-#### Function Declaration (Accept Overload) (Danger!)
+#### Function Declaration (Accept Overload) (Flexible) (Danger!)
 
 ```
 #= f(x) {
@@ -78,7 +78,7 @@ x := 0
 }
 ```
 
-#### Function Definition (Reject Overload)
+#### Function Definition (Reject Overload) (Final)
 
 ```
 #: f(x, y) {
@@ -86,9 +86,20 @@ x := 0
 }
 ```
 
+### Enumeration
+
+#### Enum Definition (Final)
+
+```
+#: Type {
+  | Some,
+  | None,
+}
+```
+
 ### Struct
 
-#### Struct Definition (Accept Overload) (Danger!)
+#### Struct Definition (Accept Overload) (Flexible) (Danger!)
 
 ```
 #= Point (
@@ -103,7 +114,7 @@ x := 0
 )
 ```
 
-#### Struct Declaration (Reject Overload)
+#### Struct Declaration (Reject Overload) (Final)
 
 ```
 #: Point (
@@ -601,58 +612,6 @@ c = 0
   >_("x is odd number")
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Operator Overload
 
