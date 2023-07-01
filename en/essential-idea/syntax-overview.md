@@ -86,6 +86,38 @@ x := 0
 }
 ```
 
+#### Function Declaration / Definition (With Optional Arguments)
+
+```
+#= f(x, *) {
+
+}
+
+#: f(x, *) {
+
+}
+```
+
+#### Function Declaration / Definition (With Optional Arguments and Keyword Arguments)
+
+```
+#: f(x, *, **) {
+
+}
+
+#: f(x, *, **) {
+
+}
+```
+
+#### Closure / Anonymous Function / Lambda Expression
+
+```
+#(x, y) => {
+  == x + y ==
+}
+```
+
 ### Enumeration
 
 #### Enum Definition (Final)
