@@ -338,21 +338,81 @@ list >> (x, y) -: {
 }
 ```
 
-#### Record
+### Record
 
 ```
-< Name = "Alice", 
-  Age = 15,
+< name = "Alice", 
+  age = 15,
 >
 ```
 
-#### Dictionary
+#### Get the value by name of attribute (item)
+
+```
+record.name
+```
+
+```
+record['name']
+```
+
+### Dictionary
 
 ```
 {
   "A": "Alice",
   "B": "Bob",
 }
+```
+
+#### Get value by key
+
+```
+dict["C"]
+```
+
+#### Add Key-Value Pair
+
+```
+dict["C"] = "Clare"
+```
+
+#### Remove key-value pair
+
+```
+dict[-: "B"]
+```
+
+#### Update dictionary by another dictionary
+
+```
+d1 <- d2
+```
+
+#### Decompose
+
+```
+d ~ (k, v)
+```
+
+#### Get keys
+
+```
+// As a variable
+k <- [d ~ (k, v)]
+
+// As a list (value expression)
+[d ~ (k, v) -> k]
+```
+
+#### Get values
+
+```
+// As a variable
+v <- [d ~ (k, v)]
+
+// As a list (value expression)
+[d ~ (k, v) -> v]
 ```
 
 ## Control Flow
