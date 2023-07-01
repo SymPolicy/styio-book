@@ -398,21 +398,21 @@ d ~ (k, v)
 #### Get keys
 
 ```
-// As a variable
-k <- [d ~ (k, v)]
-
 // As a list (value expression)
 [d ~ (k, v) -> k]
+
+// As a variable (still a list)
+k <- [d ~ (k, v)]
 ```
 
 #### Get values
 
 ```
-// As a variable
-v <- [d ~ (k, v)]
-
 // As a list (value expression)
 [d ~ (k, v) -> v]
+
+// As a variable (still a list)
+v <- [d ~ (k, v)]
 ```
 
 ## Control Flow
