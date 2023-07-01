@@ -721,7 +721,7 @@ x <- @("https://some.link/path/to/file.json")
 }
 ```
 
-### Lock
+### Lock (I'm sure there is a way but just can't find now.)
 
 ```
 *|>
