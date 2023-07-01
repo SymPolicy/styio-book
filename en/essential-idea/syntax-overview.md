@@ -492,9 +492,29 @@ val ?= {
 }
 ```
 
-### Loop / Iteration
+## Loop / Iteration
 
-#### Infinite Loop
+#### Before We Start, You Need To Know:
+
+#### Return
+
+```
+== x ==
+```
+
+#### Break
+
+```
+^^^^^^^^
+```
+
+#### Continue
+
+```
+>>>>>>>>
+```
+
+### Infinite Loop
 
 ```
 [...] >> {
@@ -540,6 +560,8 @@ c = 0
 }
 ```
 {% endcode %}
+
+### Range
 
 #### Range Iterator
 
@@ -592,6 +614,8 @@ c = 0
   >_("x is even number")
 }
 ```
+
+### List
 
 #### List Iterator
 
