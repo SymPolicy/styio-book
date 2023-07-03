@@ -370,6 +370,15 @@ list[-: ?^ (2, 3)]
 <strong>&#x3C;/> [1]
 </strong></code></pre>
 
+#### Remove elements by condition
+
+<pre><code>list = [1, 2, 3]
+
+list >> x +: ?(x &#x3C;= 2)
+
+<strong>&#x3C;/> [3]
+</strong></code></pre>
+
 #### Add elements by lambda function (Danger!)
 
 ```
