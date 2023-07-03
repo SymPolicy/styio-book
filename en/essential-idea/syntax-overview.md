@@ -286,7 +286,7 @@ list ]&#x3C; 7
 
 <pre><code>list = [1, 2, 3, 4, 5, 6]
 
-list ]>
+item = list ]>
 
 <strong>&#x3C;/> [1, 2, 3, 4, 5]
 </strong></code></pre>
@@ -352,7 +352,7 @@ list[-: (1, 2)]
 <strong>&#x3C;/> ['a', 'b', 'c']
 </strong></code></pre>
 
-#### Remove an element by value
+#### Remove an element by value (from left to right)
 
 <pre><code>list = [1, 2, 3]
 
@@ -361,7 +361,7 @@ list[-: ?= 2]
 <strong>&#x3C;/> [1, 3]
 </strong></code></pre>
 
-#### Remove elements by many values
+#### Remove elements by many values (from left to right)
 
 <pre><code>list = [1, 2, 3]
 
@@ -370,11 +370,21 @@ list[-: ?^ (2, 3)]
 <strong>&#x3C;/> [1]
 </strong></code></pre>
 
+#### Remove element (from right to left)
+
+```
+list = [1, 2, 3, 2]
+
+list[-: << ?= 2]
+
+</> [1, 2, 3]
+```
+
 #### Remove elements by condition
 
 <pre><code>list = [1, 2, 3]
 
-list >> x +: ?(x &#x3C;= 2)
+list >> x -: ?(x &#x3C;= 2)
 
 <strong>&#x3C;/> [3]
 </strong></code></pre>
