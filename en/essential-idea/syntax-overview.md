@@ -277,7 +277,7 @@ x: i32[100] = [0..]
 
 <pre><code>list = [1, 2, 3, 4, 5, 6]
 
-list ]+ 7
+list ]&#x3C; 7
 
 <strong>&#x3C;/> [1, 2, 3, 4, 5, 6, 7]
 </strong></code></pre>
@@ -286,7 +286,7 @@ list ]+ 7
 
 <pre><code>list = [1, 2, 3, 4, 5, 6]
 
-list ]-
+list ]>
 
 <strong>&#x3C;/> [1, 2, 3, 4, 5]
 </strong></code></pre>
@@ -339,6 +339,15 @@ list[+: 0 &#x3C;- 'a']
 <pre><code>list = ['a', 'o', 'b', 'c']
 
 list[-: 1]
+
+<strong>&#x3C;/> ['a', 'b', 'c']
+</strong></code></pre>
+
+#### Remove elements by many indices
+
+<pre><code>list = ['a', 'o', 'b', 'c']
+
+list[-: (1, 2)]
 
 <strong>&#x3C;/> ['a', 'b', 'c']
 </strong></code></pre>
