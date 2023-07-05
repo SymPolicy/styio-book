@@ -69,19 +69,19 @@ x := 0
 #### Function Declaration (Accept Overload) (Flexible) (Danger!)
 
 ```
-#= f(x) {
+# f = (x) => {
   == x ==
 }
 
-#= f(x, y) {
-  == y ==
+# f = (x, y) => {
+  == x + y ==
 }
 ```
 
 #### Function Definition (Reject Overload) (Final)
 
 ```
-#: f(x, y) {
+# f : (x, y) => {
   == x + y ==
 }
 ```
@@ -89,11 +89,11 @@ x := 0
 #### Function Declaration / Definition (With Optional Arguments)
 
 ```
-#= f(x, *) {
+# f = (x, *) => {
 
 }
 
-#: f(x, *) {
+# f : (x, *) => {
 
 }
 ```
@@ -101,11 +101,11 @@ x := 0
 #### Function Declaration / Definition (With Optional Arguments and Keyword Arguments)
 
 ```
-#: f(x, *, **) {
+# f = (x, *, **) => {
 
 }
 
-#: f(x, *, **) {
+# f : (x, *, **) => {
 
 }
 ```
@@ -123,7 +123,7 @@ x := 0
 #### Definition (Final)
 
 ```
-#: Type {
+# Type : {
   | Some,
   | None,
 }
@@ -131,25 +131,10 @@ x := 0
 
 ## Struct
 
-#### Struct Definition (Accept Overload) (Flexible) (Danger!)
+#### Struct Definition (Reject Overload) (Final)
 
 ```
-#= Point (
-  x: f64,
-  y: f64,
-)
-
-#= Point (
-  x: f64,
-  y: f64,
-  z: f64,
-)
-```
-
-#### Struct Declaration (Reject Overload) (Final)
-
-```
-#: Point (
+# Point : (
   x: f64, 
   y: f64,
 )
@@ -158,11 +143,11 @@ x := 0
 #### Struct: Extra Methods
 
 ```
-#: Point (
+# Point : (
   x: f64, 
   y: f64,
 ) +: {
-  eval() : {
+  eval() => {
     == (x, y) ==
   }
 }
@@ -766,8 +751,10 @@ x <- @("https://some.link/path/to/file.json")
 ### Operator Overload
 
 ```
-#= This () 
-+: {
+# This : {
+
+}
+  +: {
   `$? + {Other}`: {}
 }
 ```
