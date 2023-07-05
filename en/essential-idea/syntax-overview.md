@@ -70,19 +70,19 @@ x := 0
 
 ```
 # f = (x) => {
-  == x ==
+  == x ==>
 }
 
 # f = (x, y) => {
-  == x + y ==
+  == x + y ==>
 }
 ```
 
 #### Function Definition (Reject Overload) (Final)
 
 ```
-# f : (x, y) => {
-  == x + y ==
+# f := (x, y) => {
+  == x + y ==>
 }
 ```
 
@@ -93,7 +93,7 @@ x := 0
 
 }
 
-# f : (x, *) => {
+# f := (x, *) => {
 
 }
 ```
@@ -105,7 +105,7 @@ x := 0
 
 }
 
-# f : (x, *, **) => {
+# f := (x, *, **) => {
 
 }
 ```
@@ -123,7 +123,7 @@ x := 0
 #### Definition (Final)
 
 ```
-# Type : {
+# Type := {
   | Some,
   | None,
 }
@@ -134,7 +134,7 @@ x := 0
 #### Struct Definition (Reject Overload) (Final)
 
 ```
-# Point : (
+# Point := (
   x: f64, 
   y: f64,
 )
@@ -143,11 +143,11 @@ x := 0
 #### Struct: Extra Methods
 
 ```
-# Point : (
+# Point := (
   x: f64, 
   y: f64,
 ) +: {
-  eval() => {
+  eval := () => {
     == (x, y) ==
   }
 }
