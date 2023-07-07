@@ -370,12 +370,12 @@ list[-: ?^ (2, 3)]
 <strong>&#x3C;/> [1]
 </strong></code></pre>
 
-#### Remove element (from right to left)
+#### Remove element by value (from right to left)
 
 ```
 list = [1, 2, 3, 2]
 
-list[-: << ?= 2]
+list[[<] -: ?= 2]
 
 </> [1, 2, 3]
 ```
