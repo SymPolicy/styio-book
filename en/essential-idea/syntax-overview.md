@@ -267,13 +267,6 @@ list ]&#x3C; 7
 <strong>&#x3C;/> [1, 2, 3, 4, 5, 6, 7]
 </strong></code></pre>
 
-<pre><code>list = [1, 2, 3, 4, 5, 6]
-
-list +: (-1, 'n')
-
-<strong>&#x3C;/> [1, 2, 3, 4, 5, 6, 'n']
-</strong></code></pre>
-
 #### Pop / Delete the last element
 
 <pre><code>list = [1, 2, 3, 4, 5, 6]
@@ -282,14 +275,6 @@ item = list ]>
 
 <strong>&#x3C;/> [1, 2, 3, 4, 5]
 </strong></code></pre>
-
-```
-list = [1, 2, 3, 4, 5, 6]
-
-item = list -: -1
-
-</> [1, 2, 3, 4, 5]
-```
 
 #### Reversed
 
