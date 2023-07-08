@@ -140,6 +140,16 @@ x := 0
 )
 ```
 
+#### Struct: Inherit
+
+```
+# Point3D {:Point:} := (
+  x: f64,
+  y: f64,
+  z: f64,
+)
+```
+
 #### Struct: Extra Methods
 
 ```
@@ -394,6 +404,26 @@ list >> (x, y) -: {
 }
 ```
 
+#### Form a list from another list
+
+```
+a = [] << {
+  b >> x => {
+    == x ==>
+  }
+}
+```
+
+#### Form a list from a dictionary
+
+```
+a = [] << {
+  d >> (k, v) => {
+    == v ==>
+  }
+}
+```
+
 ### Record
 
 ```
@@ -469,6 +499,14 @@ k <- [d ~ (k, v)]
 
 // As a variable (still a list)
 v <- [d ~ (k, v)]
+```
+
+#### Apply Lambda Function
+
+```
+dict >> (x, y) => {
+    
+}
 ```
 
 ## Control Flow
