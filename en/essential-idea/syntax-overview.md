@@ -6,6 +6,34 @@
 >_("Hello, Styio!")
 ```
 
+## Basic Type
+
+#### Boolean
+
+```
+x = $T
+
+x = $F
+```
+
+#### Integer
+
+```
+x : i32 = 0
+```
+
+#### Float
+
+```
+y : f64 = 0.0
+```
+
+#### Char
+
+```
+z = '\n'
+```
+
 ## Project
 
 #### Import Module
@@ -168,32 +196,12 @@ x := 0
 }
 ```
 
-## Basic Type
-
-#### Boolean
+### Evaluation
 
 ```
-x = $T
-
-x = $F
-```
-
-#### Integer
-
-```
-x : i32 = 0
-```
-
-#### Float
-
-```
-y : f64 = 0.0
-```
-
-#### Char
-
-```
-z = '\n'
+$ sum := (x) => {
+  x += x
+}
 ```
 
 ## Collection
