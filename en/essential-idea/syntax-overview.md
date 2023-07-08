@@ -201,7 +201,7 @@ x := 0
 ```
 $ sum 
   := {
-    result <- 0
+    result <- 0;
   }
   >> (
     x
@@ -215,7 +215,7 @@ $ sum
 ```
 $ count 
   := {
-    result <- 0
+    result <- 0;
   }
   >> (
     x
@@ -248,7 +248,7 @@ $ [avg, mean]
 ```
 $ min
   := {
-    result
+    result;
   }
   >> (
     x
@@ -274,7 +274,7 @@ $ min
 ```
 $ max
   := {
-    result
+    result;
   }
   >> (
     x
