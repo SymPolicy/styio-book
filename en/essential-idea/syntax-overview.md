@@ -315,6 +315,25 @@ $ sum_revenue
   -> result
 ```
 
+#### Extra: Stream Template
+
+```
+$ extract_fields
+  >> (k, v)
+  ~> {
+    k.name
+    k.age
+  }
+```
+
+```
+$ sum_revenue
+  >> (k, v)
+  ~> {
+    "revenue" : k.revenue
+  }
+```
+
 ## Collection
 
 ### String
