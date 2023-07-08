@@ -297,6 +297,12 @@ $ max
   -> result
 ```
 
+#### Use evaluation pipeline
+
+```
+max_val = array |> ${max}
+```
+
 ## Collection
 
 ### String
