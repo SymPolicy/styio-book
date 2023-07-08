@@ -320,17 +320,18 @@ $ sum_revenue
 ```
 $ extract_fields
   >> (k, v)
-  ~> {
-    k.name
-    k.age
-  }
+  ~> (k.name, k.age)
 ```
 
 ```
 $ sum_revenue
+  = {
+    result: {#k : #v};
+    
+  }
   >> (k, v)
   ~> {
-    "revenue" : k.revenue
+    k.revenue
   }
 ```
 
