@@ -199,9 +199,102 @@ x := 0
 ### Evaluation
 
 ```
-$ sum := (x) => {
-  x += x
-}
+$ sum 
+  := {
+    result <- 0
+  }
+  >> (
+    x
+  ) 
+  => {
+    result += x
+  }
+  -> result
+```
+
+```
+$ count 
+  := {
+    result <- 0
+  }
+  >> (
+    x
+  )
+  => {
+    result += 1
+  }
+  -> result
+```
+
+```
+$ [avg, mean]
+  := {
+    count <- 0;
+    sum <- 0;
+  }
+  >> (
+    x
+  )
+  => {
+    count += 1
+    sum += x
+  } 
+  -> (sum, count) 
+  => {
+    == sum / count ==>
+  }
+```
+
+```
+$ min
+  := {
+    result
+  }
+  >> (
+    x
+  )
+  => {
+    ?? (result != {})
+    :) {
+      ?? (x < result)
+      :) {
+        result = x
+      }
+      :( {
+        >>>>>>>>>>
+      }
+    }
+    :( {
+      result = x
+    }
+  } 
+  -> result
+```
+
+```
+$ max
+  := {
+    result
+  }
+  >> (
+    x
+  )
+  => {
+    ?? (result != {})
+    :) {
+      ?? (x > result)
+      :) {
+        result = x
+      }
+      :( {
+        >>>>>>>>>>
+      }
+    }
+    :( {
+      result = x
+    }
+  } 
+  -> result
 ```
 
 ## Collection
