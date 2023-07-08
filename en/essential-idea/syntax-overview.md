@@ -143,11 +143,16 @@ x := 0
 #### Struct: Inherit
 
 ```
-# Point3D {:Point:} := (
-  x: f64,
-  y: f64,
-  z: f64,
-)
+# Point3D 
+  <: {
+    Point; 
+    Else;
+  } 
+  := (
+    x: f64,
+    y: f64,
+    z: f64,
+  )
 ```
 
 #### Struct: Extra Methods
