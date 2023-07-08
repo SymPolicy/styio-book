@@ -200,7 +200,7 @@ x := 0
 
 ```
 $ sum 
-  := {
+  = {
     result <- 0;
   }
   >> (
@@ -214,7 +214,7 @@ $ sum
 
 ```
 $ count 
-  := {
+  = {
     result <- 0;
   }
   >> (
@@ -228,7 +228,7 @@ $ count
 
 ```
 $ [avg, mean]
-  := {
+  = {
     count <- 0;
     sum <- 0;
   }
@@ -247,7 +247,7 @@ $ [avg, mean]
 
 ```
 $ min
-  := {
+  = {
     result;
   }
   >> (
@@ -273,7 +273,7 @@ $ min
 
 ```
 $ max
-  := {
+  = {
     result;
   }
   >> (
@@ -301,6 +301,18 @@ $ max
 
 ```
 max_val = array |> ${max}
+```
+
+#### Extra: Evaluate Stream Computing
+
+```
+$ sum_revenue
+  = {result}
+  >> (x) 
+  => {
+    result += x.revenue
+  }
+  -> result
 ```
 
 ## Collection
