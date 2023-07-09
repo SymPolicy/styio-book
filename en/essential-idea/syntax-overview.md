@@ -325,13 +325,11 @@ $ extract_fields
 
 ```
 $ sum_revenue
-  = {
-    result: {#k : #v};
-    
-  }
   >> (k, v)
   ~> {
-    k.revenue
+    k.uuid,
+    count(k.region),
+    sum(k.price),
   }
 ```
 
