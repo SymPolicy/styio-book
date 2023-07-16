@@ -10,6 +10,7 @@
 ## Essential Idea
 
 * [Syntax Overview](essential-idea/syntax-overview.md)
+* [λ-Calculus](essential-idea/l-calculus.md)
 * [Binding](essential-idea/binding.md)
 * [Filling](essential-idea/filling.md)
 
