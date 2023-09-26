@@ -1,66 +1,56 @@
 # Variable
 
-### Define
+#### Variable Declaration
 
 ```
-@(x, y);
+@(x, y)
 ```
 
-### Define + Assign&#x20;
-
-#### Mutable =>
+\=> **+ Type**
 
 ```
-/*
- * Recursive Assignment
- * 1. Define `x`.
- * 2. Initialize `x` = 1.
- * 3. Define `y`.
- * 4. Initialize `y` = 2.
- */
- 
-@(x = 1, y = 2);
-
-/*
- * Comprehensive Assignment
- * 1. Define `x` and `y`.
- * 2. Set `x` as 1
- * 3. Set `y` as 2
- */
- 
-@(x, y) = (1, 2);
-
-/*
- * Adaptive Transformation (<~)
- * 1. Define `x` and `y`.
- * 2. Define a tuple (1, 2)
- * 3. Deconstruct (1, 2)
- * 4. Deconstruct (x, y)
- * 5. Map x to 1
- * 6. Map y to 2
- */
- 
-@(x, y) <~ (1, 2);
+@(
+    x: i32,
+    y: f64,
+)
 ```
 
-#### Immutable =>
-
-When a variable has been assigned once using walrus symbol :=, it will become immutable.
+\=> **+ Optional Type**
 
 ```
-@(x, y) := (1, 2);
+@(
+    x: i32 | f64 | None
+)
 ```
 
-### Define
+#### Resource Initialization (Immutable)
 
-#### + Type =>
-
-```
-@(x: int = 0)
-```
-
-#### + Optional Type =>
+_Resources can't be changed once initialized._
 
 ```
-@(x: [int|float])
+@(x <- 1, y <- 2)
+```
+
+#### Variable Declaration => Assignment
+
+\=> Mutable
+
+```
+@(x, y) = (1, 2)
+```
+
+\=> Immutable
+
+_Once a variable is assigned a value using the walrus symbol `:=`, it becomes **immutable**._
+
+```
+@(x, y) := (1, 2)
+```
+
+#### Adaptive Transformation
+
+_This is equivalent to resources initialization._
+
+```
+@(x, y) <~ (1, 2)
 ```
