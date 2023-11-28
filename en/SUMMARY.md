@@ -2,6 +2,7 @@
 
 * [Styio](README.md)
 * [Hello, World](hello-world.md)
+* [Resources](resources.md)
 * [Variable](variable.md)
 * [Function](function.md)
 * [Operator Overloading](operator-overloading.md)
