@@ -18,9 +18,17 @@ Network I/O - Download
 @(data: json <- "http://path/to/file")
 ```
 
-Network I/O - Request
 
 
+#### File
+
+```
+@("/path/to/file").walk()
+    .forAll()
+    .parse().as(data)
+    .filter(data["name"] == "Alice")
+    .sendTo("127.0.0.1:8080")
+```
 
 ### Resource Types
 
