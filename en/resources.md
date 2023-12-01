@@ -24,10 +24,51 @@ Network I/O - Download
 
 ```
 @("/path/to/file").walk()
-    .forAll()
-    .parse().as(data)
+    .foreach()
+    .tojson().as(data)
     .filter(data["name"] == "Alice")
-    .sendTo("127.0.0.1:8080")
+    .sendto("127.0.0.1:8888")
+
+@("/path/to/a/directory/")
+    >> (entry)
+    ? (entry.isfile())
+    => (data: json <- entry)
+    ? (data["name"] == "Alice") 
+    => { data -> @("127.0.0.1:8888") }
+```
+
+1. get the resource address (anonymous)
+2. parse -> found: this is a directory
+
+step 2 can be skipped, if the type of resource has been provided, in some way
+
+```
+@dir("/path/to/a/directory/")
+```
+
+3. create an iterator for the directory
+
+the iterator should not be invalidated even if some files are removed
+
+4. and there is a filter, for each entry
+5. read the file (entry)
+6. and auto parse it to json
+
+if there are other formats, just ignore them
+
+if there are something wrong, just ignore them too
+
+if there are something wrong, and we want to handle that, then
+
+```
+@("/path/to/a/directory/")
+    >> (entry) ? (entry.isfile())
+    => (data: json <- entry) ?= {
+        !! => { >_($"Error: Failed to parse {entry.name} as json") }
+        __ => {
+            // Success
+        }
+    }
 ```
 
 ### Resource Types
