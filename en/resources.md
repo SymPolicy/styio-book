@@ -71,6 +71,18 @@ if there are something wrong, and we want to handle that, then
     }
 ```
 
+match regex: recognize link / file path
+
+iterator: for each entry
+
+recognize data format
+
+load file
+
+(deserialize) parse json to object / data struct
+
+done
+
 ### Resource Types
 
 #### Structured Data Formats
