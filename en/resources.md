@@ -83,6 +83,17 @@ load file
 
 done
 
+### Implementation
+
+1.  build a regex analyzer to recognize type of resources:
+
+    \[ file | directory | http / https | ftp | ... ]
+2. implement an iterator over a directory tree, where each entry is a file (or directory) handler. And also choose the way of iteration (bfs / dfs).
+3. find a way to call a function of an object
+4. support: define a function and hence call the function
+5. auto detect the data format of a file
+6. auto parse json file
+
 ### Resource Types
 
 #### Structured Data Formats
