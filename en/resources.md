@@ -206,6 +206,16 @@ like a string, there are two `"` at both the start and the end
 
 we can directly skip over the string, and it will be super fast
 
+if we found the target tag at a very early stage, there will be an early stop
+
+
+
+skip over useless tags
+
+early stop
+
+what else?
+
 ### Resource Types
 
 #### Structured Data Formats
