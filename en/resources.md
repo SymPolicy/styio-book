@@ -25,7 +25,7 @@ Network I/O - Download
 {% code fullWidth="false" %}
 ```
 @("/path/to/a/directory/").walk()
-    .forEach { entry ->
+    .forEach { entry =>
         if (entry.isfile()) {
             data = entry.read()
                 .tojson()
