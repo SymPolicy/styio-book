@@ -216,6 +216,38 @@ early stop
 
 what else?
 
+
+
+twitter.json - simdjson - 2.4GB/s
+
+\~1.5 cycles per byte
+
+| simd-json                 | styio                                |
+| ------------------------- | ------------------------------------ |
+| read all of the content   | read only expected tags (early stop) |
+| check if it is valid JSON | does not care at all                 |
+| check unicode encoding    | check unicode encoding               |
+| parse numbers             | parse numbers                        |
+| build DOM                 | just a struct of data                |
+
+simd-json
+
+1.  avoid hard-to-predict branches
+
+    each time a processor see a branch, it do branch predictions, so, remove branches where possible
+2. use wide words (don't process byte by byte) -> SIMD
+3. avoid memory allocation
+4. measure the performance - benchmark driven development
+
+Examples
+
+1. UTF-8 -> only a very small part of unicode is valid character, so check bytes
+2. detect escapable characters
+3. get json structure by bitwise operation
+4. number parsing is expensive
+
+runtime dispatch -> pointer re-assignment
+
 ### Resource Types
 
 #### Structured Data Formats
