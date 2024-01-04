@@ -17,6 +17,7 @@
 
 ## Type System
 
+* [Overview](type-system/overview.md)
 * [Int](type-system/int.md)
 * [Float](type-system/float.md)
 * [Bool](type-system/bool.md)
