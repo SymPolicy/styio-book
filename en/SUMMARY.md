@@ -5,6 +5,7 @@
 * [Resources](resources.md)
 * [Variable](variable.md)
 * [Function](function.md)
+* [Operators](operators.md)
 * [Operator Overloading](operator-overloading.md)
 * [None](none.md)
 
