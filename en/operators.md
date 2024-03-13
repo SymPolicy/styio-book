@@ -15,8 +15,8 @@
 | `x ⊽ y`     | bitwise NOR         | 302        |
 | `x \| y`    | bitwise OR          | 301        |
 |             |                     |            |
-| `lhs(x, y)` | bitwise left shift  | 701        |
-| `rsh(x, y)` | bitwise right shift | 701        |
+| `shl(x, y)` | bitwise left shift  | 701        |
+| `shr(x, y)` | bitwise right shift | 701        |
 
 Operators for bitwise XOR, NAND, NOR are derived from [Julia](https://docs.julialang.org/en/v1/manual/mathematical-operations/), they can be renamed to whatever you want in Styio. Since the opretors are not on most keyboards, it is strongly recommended to rename them as the following:
 
@@ -26,15 +26,23 @@ Operators for bitwise XOR, NAND, NOR are derived from [Julia](https://docs.julia
 | `x ⊼ y`    | `x NAND y`     |
 | `x ⊽ y`    | `x NOR y`      |
 
-Traditional operators of bitwise left shift (<<) and right shift (>>) operations conflict with the iteration operator (>>) of Styio. Therefore, we use function as substitution. They are defined in the "bitwise" library, and are treated the same as other bitwise operators ( `~`, `&`, `|`, ...)
+Traditional operators of bitwise left shift (<<) and right shift (>>) operations conflict with the iteration operator (>>) of Styio. Therefore, we use function as substitution. They are defined in the "bitwise" library, and are treated the same as other bitwise operators ( `~`, `&`, `|`, ...).
 
 ```
 @<bitwise>
 
 a = 4, b = 1
-left_shift = lsh(a, b)
-right_shift = rsh(a, b)
+left_shift = shl(a, b)
+right_shift = shr(a, b)
 ```
+
+|         |              |
+| ------- | ------------ |
+| `x ⊻ y` | `xor(x, y)`  |
+| `x ⊼ y` | `nand(x, y)` |
+| `x ⊽ y` | `nor(x, y)`  |
+|         | `shl(x, y)`  |
+|         | `shr(x, y)`  |
 
 ## Logic Operators
 
