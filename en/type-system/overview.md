@@ -25,3 +25,7 @@ String is a collection, which was treated the same as array and list.&#x20;
 | Type Name               |
 | ----------------------- |
 | String \| string \| str |
+
+### Type Inference
+
+Consistent type means aggregatable type.
