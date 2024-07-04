@@ -3,7 +3,7 @@
 #### TPC-H Query 1
 
 ```
-@("lineitem.csv") >> #(data: auto)
+@("lineitem.csv") >> #(data: csv)
   => filter { data["l_shipdate"] <= Date("1998-12-01") - Day(90) }
   => map { l_returnflag = data["l_returnflag"]
            l_linestatus = data["l_linestatus"],
