@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Styio](README.md)
+  * [Examples](readme/examples.md)
 * [Hello, World](hello-world.md)
 * [Resources](resources.md)
 * [Variable](variable.md)
