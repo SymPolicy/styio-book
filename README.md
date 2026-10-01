@@ -28,6 +28,8 @@ python3 scripts/check_rendered.py .artifacts
 
 Inspect the HTML visually as well; structural checks do not prove layout quality. No backend publishing configuration is changed here. Public hosting and GitBook synchronization remain separate release actions.
 
+The `Book validation` pull-request workflow runs these source, unit-test, and HTML structure checks with read-only repository access. It does not compile or execute Styio; runtime acceptance remains a separate result tied to an identified compiler binary.
+
 ## Updating the cookbook
 
 1. Select a compiler commit and inspect its feature contract and positive/negative fixtures.
