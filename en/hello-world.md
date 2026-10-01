@@ -1,27 +1,9 @@
 # Hello, World
 
-```
->_("Hello, World!")
+Use the canonical sink form:
+
+```text
+"Hello, World!" -> @stdout
 ```
 
-
-
-{% tabs %}
-{% tab title="Python" %}
-```python
-print("Hello, World!")
-```
-{% endtab %}
-
-{% tab title="Java" %}
-```java
-System.out.println("Hello, World!");
-```
-{% endtab %}
-
-{% tab title="C++" %}
-```
-std::cout << "Hello, World!" << std::endl;
-```
-{% endtab %}
-{% endtabs %}
+See [First program](current-language.md) for the command, pinned source, expected output, and verification boundary.

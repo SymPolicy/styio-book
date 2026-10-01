@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/Unka-Malloc/styio-nightly",
+  "compiler_ref": "fd3b3e2d9a900fa58bc70641a42885c991650210",
+  "cases": [
+    {
+      "id": "hello",
+      "source": "example/hello_world.styio",
+      "source_sha256": "f87ca70fdab5f779b2bed4ad3a85880530204cfb47102f608f9e080b4e78aa43",
+      "timeout_seconds": 30,
+      "stdout_source": "example/expected/hello_world.out",
+      "stdout_sha256": "c98c24b677eff44860afea6f493bbaec5bb1c4cbb209c6fc2bbb47f66ff2ad31"
+    },
+    {
+      "id": "queens-nested",
+      "source": "example/algorithms/eight_queens.styio",
+      "source_sha256": "d15ace295ad9c2b2622077aa44052ad42d6a01da065a9dfd5528dc0a3359062b",
+      "timeout_seconds": 30,
+      "stdout_source": "example/expected/eight_queens.out",
+      "stdout_sha256": "13c1dc569ae4a0d7f90d8f83d22fc9c8fa526e133f8fea0f9526c8533c4d8da3"
+    },
+    {
+      "id": "queens-guards",
+      "source": "tests/features/control_flow/t12_chained_guard_eight_queens.styio",
+      "source_sha256": "54db2fff0242d7eec810a9986afcae4251a57685e1ccda55930a612ed6bc4918",
+      "timeout_seconds": 30,
+      "stdout_source": "tests/features/control_flow/expected/t12_chained_guard_eight_queens.out",
+      "stdout_sha256": "13c1dc569ae4a0d7f90d8f83d22fc9c8fa526e133f8fea0f9526c8533c4d8da3"
+    },
+    {
+      "id": "stdin-transform",
+      "source": "tests/features/stdio_input/t05_stdin_transform.styio",
+      "source_sha256": "151f0a4416165f97ed3bfd624ba250c0acac96cca2559cb2eedf0ba528f515c1",
+      "timeout_seconds": 30,
+      "stdout_source": "tests/features/stdio_input/expected/t05_stdin_transform.out",
+      "stdout_sha256": "3ad903e509b55b040b80a79c18b6e733415ee5ab30c9bf98119b215f51ad7460",
+      "stdin_source": "tests/features/stdio_input/data/transform_input.txt",
+      "stdin_sha256": "a1852ec81c3b20981618e10c24edce1a85ba43ef5f09aaf13bd44d6a715ed5b5"
+    },
+    {
+      "id": "file-transform",
+      "source": "tests/features/stream_processing/t10_full_pipeline.styio",
+      "source_sha256": "86c565dd7a5b301097587b4bac38d15b0710118a8a4cf384b7fa45da71ae8277",
+      "timeout_seconds": 30,
+      "assets": [
+        {
+          "path": "tests/features/stream_processing/data/input.txt",
+          "sha256": "a1852ec81c3b20981618e10c24edce1a85ba43ef5f09aaf13bd44d6a715ed5b5"
+        }
+      ],
+      "artifact": {
+        "path": "doubled.txt",
+        "text": "204060"
+      },
+      "source_replacements": [
+        {
+          "old": "/tmp/styio_doubled.txt",
+          "new": "doubled.txt",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "generic-relay",
+      "source": "tests/features/inferred_generics/t05_generic_composition.styio",
+      "source_sha256": "2ce5ca63348a4e33fdac9f87c2de7e53a76f27772b5f3d8183289c710c4c829f",
+      "timeout_seconds": 30,
+      "stdout_source": "tests/features/inferred_generics/expected/t05_generic_composition.out",
+      "stdout_sha256": "4ef086bfa938e2b4f457839eb70c9617e1ed78d8d5c0ec9fdb6fef6b829b34b2"
+    },
+    {
+      "id": "reject-generic-binder",
+      "source": "tests/features/inferred_generics/e03_authored_generic_binder.styio",
+      "source_sha256": "6ee24ef48100299d64c43242bbe630e0d2b0ae1e5800473009ad5dbb34aa3b83",
+      "timeout_seconds": 30,
+      "stderr_source": "tests/features/inferred_generics/expected/e03_authored_generic_binder.err",
+      "stderr_sha256": "f210907491060cb3d3f1e6a5c38f3ea3d6c3749df9cc57b4bb81880bf5c7d502",
+      "expect_failure": true
+    },
+    {
+      "id": "reject-type-arguments",
+      "source": "tests/features/inferred_generics/e04_call_site_type_arguments.styio",
+      "source_sha256": "78ed87bb05ca41fc58d26ce1cfd569e54f1ad8c485d528eacc8ad041f11ce856",
+      "timeout_seconds": 30,
+      "stderr_source": "tests/features/inferred_generics/expected/e04_call_site_type_arguments.err",
+      "stderr_sha256": "7fc3c94c1722d573fd6c5200a0cba7c78f259863749111e448b586480b831902",
+      "expect_failure": true
+    },
+    {
+      "id": "reject-empty-list",
+      "source": "tests/features/literal_defaulting/e01_empty_list_without_context.styio",
+      "source_sha256": "d0c175b4109ddc55713df33df9a63f99815c217db85c8883297f90eacfcc5dc0",
+      "timeout_seconds": 30,
+      "stderr_source": "tests/features/literal_defaulting/expected/e01_empty_list_without_context.err",
+      "stderr_sha256": "bdf9d3c8b1aa30adcc133108bbef9701048a38acfa165bfb9db2cd9ea8877c63",
+      "expect_failure": true
+    }
+  ]
+}
