@@ -1,0 +1,55 @@
+name: Book validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: book-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docs:
+    name: Verify user guide and cookbook sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out book
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Check out pinned compiler sources
+        uses: actions/checkout@v4
+        with:
+          repository: Unka-Malloc/styio-nightly
+          ref: fd3b3e2d9a900fa58bc70641a42885c991650210
+          path: .artifacts/compiler-source
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check navigation, verifier tests, and pinned snippets
+        run: |
+          python3 scripts/check_docs.py
+          python3 -m unittest discover -s scripts -p 'test_*.py'
+          python3 scripts/verify_examples.py --source .artifacts/compiler-source --check-only --report .artifacts/static-verification.json
+
+      - name: Render both languages and check generated HTML
+        run: |
+          npx --yes honkit@6.2.2 build cn "$PWD/.artifacts/rendered/cn"
+          npx --yes honkit@6.2.2 build en "$PWD/.artifacts/rendered/en"
+          python3 scripts/check_rendered.py .artifacts/rendered
