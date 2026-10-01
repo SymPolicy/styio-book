@@ -1,0 +1,5 @@
+.artifacts/
+_book/
+node_modules/
+.tmp-doc-server.log
+__pycache__/
