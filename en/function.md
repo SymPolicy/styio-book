@@ -1,39 +1,5 @@
-# Function
+# Functions
 
-{% tabs %}
-{% tab title="Definition" %}
-```
-f(x, y) := {
-    ...
-}
-```
-{% endtab %}
-{% endtabs %}
+Final callable binding uses `# name := (...) => ...`; a block returns with `<| expr`. The compiler infers eligible reusable callable relations. Explicit source generic parameter lists are not supported.
 
-### Closure (Anonymous Function)
-
-{% tabs %}
-{% tab title="Usage" %}
-```
-#(x, y) => { 
-    ==(x + y)==
-}
-
-#(x, y) => | x + y |
-```
-{% endtab %}
-
-{% tab title="Definition" %}
-```
-/*
- * Bring variables into the expression.
- */
-
-@(x, y) -> {
-    x + y
-}
-
-@(x, y) -> | x + y |
-```
-{% endtab %}
-{% endtabs %}
+Read [Current forms](current-language.md) and [Inference and reuse](cookbook/chaining-and-composition.md) for pinned examples and their limitations. The [callable feature specification](https://github.com/Unka-Malloc/styio-nightly/blob/fd3b3e2d9a900fa58bc70641a42885c991650210/docs/design/syntax/features/core-callable-binding.md) owns the language contract.

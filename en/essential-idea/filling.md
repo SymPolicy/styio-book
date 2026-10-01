@@ -1,3 +1,5 @@
+> **Historical design note, not current usage guidance.** This page preserves early proposals and rationale; code may be retired or never implemented. Start at the [current guide](../README.md) and do not infer active syntax or APIs from this page.
+
 # Filling
 
 \``#`\` means a template, which is the start of filling process. Variables labelled with `#` will be filled with a certain value later.
