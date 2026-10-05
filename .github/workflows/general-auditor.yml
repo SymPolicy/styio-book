@@ -33,15 +33,17 @@ jobs:
           base: ${{ github.event.pull_request.base.sha || github.event.merge_group.base_sha || github.event.before }}
           output: general-auditor-result.json
       - name: Publish redacted job summary
+        if: ${{ always() && hashFiles('general-auditor-result.json') != '' }}
         run: |
           python3 -I - <<'PYTHON'
           import json, os
           with open('general-auditor-result.json') as stream:
               result = json.load(stream)
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as stream:
-              stream.write('General-Auditor: ' + str(len(result['findings'])) + ' advisory signals. Contextual Agent review is not performed in CI.\n')
+              stream.write('General-Auditor: ' + str(result['status']) + '; ' + str(len(result['findings'])) + ' findings. Contextual Agent review is not performed in CI.\n')
           PYTHON
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # immutable action revision
+      - if: ${{ always() && hashFiles('general-auditor-result.json') != '' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # immutable action revision
         with:
           name: general-auditor-report
           path: |
