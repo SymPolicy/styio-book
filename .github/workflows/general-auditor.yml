@@ -1,0 +1,33 @@
+name: General-Auditor
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  merge_group:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  general-auditor:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out this repository at the event commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # immutable action revision
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.event.merge_group.head_sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # immutable action revision
+        with:
+          python-version: '3.12'
+      - name: Run General-Auditor for SymPolicy/styio-book
+        uses: Unka-Malloc/General-Auditor@only
+        with:
+          repository: SymPolicy/styio-book
+          directory: .
+          head: ${{ github.event.pull_request.head.sha || github.event.merge_group.head_sha || github.sha }}
+          base: ${{ github.event.pull_request.base.sha || github.event.merge_group.base_sha || github.event.before }}
